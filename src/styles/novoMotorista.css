@@ -1,0 +1,347 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap");
+
+/* Estilização principal */
+.novo-operador-container {
+  width: 100%;
+  max-width: 1042px;
+  margin: 40px auto;
+  text-align: left;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+/* Corrige o problema da tela desaparecendo ao trocar de aba */
+.aba-conteudo {
+  min-height: 600px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.aba-conteudo.ativa {
+  opacity: 1;
+  visibility: visible;
+}
+
+.novo-operador-content {
+  min-height: 500px;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.sidebar-open .novo-operador-container {
+  margin-left: 250px;
+}
+
+/* Estilização do cabeçalho */
+.novo-operador-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.novo-operador-header h1,
+.dados-acesso-title {
+  font-size: clamp(22px, 3vw, 37px);
+  font-weight: bold;
+  color: #3b447b;
+  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
+}
+
+/* Botão de voltar */
+.back-button {
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  font-size: clamp(14px, 2vw, 16px);
+  color: white;
+  background: #3b447b;
+  width: 140px;
+  height: 35px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease-in-out;
+}
+
+.back-button:hover {
+  background: #2e376b;
+}
+
+/* Estilização das abas */
+.tabs {
+  display: flex;
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.tabs span {
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.tabs .active,
+.comissao {
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  font-size: clamp(16px, 2vw, 20px);
+  line-height: 26.38px;
+  color: #3b447b;
+}
+
+.tabs .inactive {
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  font-size: clamp(14px, 2vw, 20px);
+  line-height: 26.38px;
+  color: #676767;
+  padding: 10px 20px;
+  border-radius: 10px 10px 0 0;
+  cursor: pointer;
+}
+
+/* Estilização do formulário */
+.novo-operador-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  align-items: center;
+}
+
+.form-row.three-cols {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* Grupos de input */
+.form-group {
+  /* flex: 1; */
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #676363;
+  margin-bottom: 5px;
+}
+
+.form-group select {
+  width: 100%;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+}
+
+input[name="codigo"] {
+  width: 40%;
+}
+
+select[name="tipo"],
+select[name="situacao"] {
+  width: 90%;
+  padding: 8px;
+}
+
+input[name="celular"] {
+  width: 60%;
+}
+
+input[name="categoria"] {
+  width: 30%;
+}
+
+input[name="vencimento"] {
+  width: 60%;
+  cursor: pointer;
+}
+
+/* input[name="email"],
+input[name="nome"] {
+  width: 110%;
+} */
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #07aba0;
+}
+
+/* Estilização dos placeholders */
+.form-group input::placeholder {
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #999999;
+  opacity: 1;
+}
+
+/* Botões */
+.buttons {
+  display: flex;
+  gap: 35px;
+}
+
+/* Botão salvar */
+.save-btn {
+  background-color: #3b447b;
+  color: white;
+  width: 140px;
+  height: 38px;
+  padding: 5px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+.save-btn:hover {
+  background-color: #2e365f;
+  transform: scale(1.05);
+}
+
+/* Botão cancelar */
+.cancel-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #3b447b;
+  font-family: "Roboto Slab", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26.38px;
+  text-decoration: none;
+  transition: 0.3s ease, transform 0.2s ease-in-out;
+}
+
+.cancel-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Força os inputs Usuário do Sistema e Senha do Sistema a ficarem um abaixo do outro */
+.form-column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 10%;
+}
+
+.hrButtons {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #07aba0, #ccc, #999);
+  margin-top: 100px;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 0;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .novo-operador-container {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .form-row.three-cols {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .novo-operador-container {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .tabs {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tabs span {
+    width: 100%;
+  }
+
+  .novo-operador-header h1 {
+    font-size: 28px;
+  }
+
+  .form-group input,
+  .form-group select {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .novo-operador-header h1 {
+    font-size: 22px;
+  }
+
+  .back-button {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  .save-btn,
+  .cancel-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+/* Adiciona borda vermelha nos inputs com erro */
+.input-error {
+  border: 2px solid red !important;
+  background-color: #ffe6e6;
+  transition: border 0.3s ease-in-out;
+}
+
+/* Mensagem de erro em vermelho abaixo do campo */
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}

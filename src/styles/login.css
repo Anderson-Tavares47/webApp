@@ -1,0 +1,291 @@
+/* Centraliza o conteúdo no meio da tela */
+.login-container {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #f3f4f6; */
+}
+
+/* Caixa de login */
+.login-box {
+  /* background: white; */
+  padding: 40px;
+  border-radius: 12px;
+  /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); */
+  width: 400px;
+  text-align: center;
+}
+
+/* Estilização da logo */
+.login-box img {
+  width: 211px; /* Largura exata */
+  height: 214px; /* Altura exata */
+  border-radius: 39px; /* Arredondamento */
+  object-fit: contain; /* Mantém a proporção da imagem */
+  display: block;
+  margin: 0 auto 15px; /* Centraliza a logo */
+}
+
+/* Título "Seja Bem Vindo" */
+.login-title {
+  font-family: "Istok Web", sans-serif;
+  font-weight: 700; /* Negrito */
+  font-size: 36px; /* Tamanho exato */
+  line-height: 51.82px; /* Altura da linha */
+  color: #3b447b; /* Cor do texto */
+  text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra aprimorada */
+  width: 100%; /* Garante que o título não quebre */
+  white-space: nowrap; /* Evita a quebra de linha */
+  text-align: center;
+  margin-bottom: 5px; /* Ajusta o espaço entre título e subtítulo */
+}
+
+/* Subtítulo "Efetue seu login" */
+.login-subtitle {
+  font-family: "Istok Web", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28.79px;
+  color: #07aba0;
+  text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  text-align: center;
+  display: block;
+  margin-top: 10px; /* Mantém espaçamento fixo */
+  margin-bottom: 50px; /* Mantém espaço entre o subtítulo e os inputs */
+
+  /* Sombra do texto */
+  text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Contêiner do input */
+.input-container,
+.password-container {
+  position: relative;
+  width: 300px; /* Largura fixa */
+  margin: 15px auto; /* Aumenta o espaçamento entre os inputs */
+  padding-bottom: 10px;
+}
+
+/* ✅ Ajuste do campo de senha e ícone */
+.password-container {
+  position: relative;
+  width: 300px; /* Mantém a largura fixa */
+  margin: 15px auto;
+}
+
+/* Ícone de mostrar/ocultar senha */
+.password-toggle-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+  color: #555;
+  transition: color 0.2s ease-in-out;
+}
+
+.password-toggle-icon:hover {
+  color: #000;
+}
+
+/* Ajuste para manter o alinhamento correto */
+.password-input {
+  padding-right: 40px; /* Espaço para o ícone */
+}
+
+/* Campo de entrada */
+.login-input {
+  width: 90%;
+  height: 18px; /* Altura exata */
+  padding: 12px;
+  border: 2px solid #9ca3af; /* Cor da borda padrão */
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Quando o input está focado */
+.login-input:focus {
+  border-color: #3b447b; /* Cor azul escuro */
+  box-shadow: 0px 0px 5px rgba(59, 68, 123, 0.3);
+}
+
+/* Label animada para os inputs */
+.input-label,
+.password-label {
+  position: absolute;
+  left: 12px;
+  top: 40%; /* Subiu um pouco mais */
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #9ca3af;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Quando o input está focado ou preenchido, a label sobe */
+.login-input:focus + .input-label,
+.login-input:not(:placeholder-shown) + .input-label,
+.password-input:focus + .password-label,
+.password-input:not(:placeholder-shown) + .password-label {
+  top: 2px; /* Subiu mais para ficar acima da borda */
+  font-size: 12px;
+  color: #3b447b;
+  background: white;
+  padding: 0 5px;
+}
+
+/* Linha de fundo do input para efeito */
+.input-container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #3b447b;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.login-input:focus ~ .input-container::after {
+  transform: scaleX(1);
+}
+
+/* Contêiner do input de senha */
+.password-container {
+  position: relative;
+  width: 300px; /* Largura fixa */
+  margin: 10px auto;
+}
+
+/* Campo de entrada da senha */
+.password-input {
+  width: 90%;
+  height: 18px; /* Altura exata */
+  padding: 12px;
+  border: 2px solid #9ca3af; /* Cor da borda padrão */
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Quando o input está focado */
+.password-input:focus {
+  border-color: #3b447b; /* Cor azul escuro */
+  box-shadow: 0px 0px 5px rgba(59, 68, 123, 0.3);
+}
+
+/* Label animada para senha */
+.password-label {
+  position: absolute;
+  left: 12px;
+  top: 40%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #9ca3af;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Botão de acesso */
+.login-button {
+  width: 300px; /* Largura fixa */
+  height: 40px; /* Altura fixa */
+  background-color: #3b447b; /* Cor exata */
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 100px; /* Arredondamento exato */
+  padding: 8px 120px;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 70px auto 0; /* Aumenta a distância entre os inputs e o botão */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease-in-out, transform 0.1s;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .login-box {
+    width: 90%; /* Reduz a largura da caixa de login */
+    padding: 20px; /* Reduz o padding para telas menores */
+  }
+
+  .login-title {
+    font-size: 28px; /* Reduz o tamanho da fonte do título */
+    line-height: 40px; /* Ajusta a altura da linha */
+  }
+
+  .login-subtitle {
+    font-size: 18px; /* Reduz o tamanho da fonte do subtítulo */
+    line-height: 24px; /* Ajusta a altura da linha */
+    margin-bottom: 30px; /* Reduz o espaçamento inferior */
+  }
+
+  .input-container,
+  .password-container {
+    width: 90%; /* Ajusta a largura dos inputs */
+  }
+
+  .login-button {
+    width: 90%; /* Ajusta a largura do botão */
+    padding: 8px 0; /* Reduz o padding horizontal */
+    margin-top: 40px; /* Ajusta o espaçamento superior */
+  }
+}
+
+/* Responsividade para telas muito pequenas (ex: smartphones) */
+@media (max-width: 480px) {
+  .login-box img {
+    width: 150px; /* Reduz o tamanho da logo */
+    height: 150px;
+  }
+
+  .login-title {
+    font-size: 24px; /* Reduz ainda mais o tamanho da fonte do título */
+    line-height: 36px;
+  }
+
+  .login-subtitle {
+    font-size: 16px; /* Reduz ainda mais o tamanho da fonte do subtítulo */
+    line-height: 22px;
+    margin-bottom: 20px; /* Reduz o espaçamento inferior */
+  }
+
+  .input-container,
+  .password-container {
+    width: 100%; /* Ajusta a largura dos inputs para ocupar toda a largura */
+  }
+
+  .login-button {
+    width: 100%; /* Ajusta a largura do botão para ocupar toda a largura */
+    margin-top: 30px; /* Reduz o espaçamento superior */
+  }
+}
+
+.login-button:hover {
+  background-color: #2e365f; /* Cor do hover */
+}
+
+.login-button:active {
+  transform: scale(0.98);
+}
+
+/* Mensagem de erro */
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+}

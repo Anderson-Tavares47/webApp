@@ -1,0 +1,1262 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap");
+
+/* ✅ Container principal */
+.novo-producoes-container {
+  width: 100%;
+  max-width: 1042px;
+  margin: 40px auto;
+  text-align: left;
+  padding: 0 10px;
+}
+
+/* ✅ Cabeçalho */
+.novo-producoes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* ✅ Título */
+.novo-producoes-title {
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 42.2px;
+  color: #3b447b;
+}
+
+/* ✅ Botão "Voltar" */
+.back-button {
+  background-color: #3b447b;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 8px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.back-button:hover {
+  background-color: #2e365f;
+}
+
+/* ✅ Tabs */
+.tabs {
+  display: flex;
+  gap: 30px;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.tab {
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26.38px;
+  color: #676363;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.tab.active {
+  color: #3b447b;
+  font-weight: bold;
+}
+
+/* ✅ Linha abaixo das tabs */
+.tabs-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, #07aba0, #cccccc, #999999);
+  margin-bottom: 15px;
+}
+
+/* ✅ Formulário */
+.dados-gerais-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* ✅ Organiza os inputs corretamente */
+.form-row {
+  display: flex;
+  justify-content: end;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+}
+
+.form-row2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  /* gap: 30px; */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: calc(20% - 15px); /* Divide os inputs igualmente em 5 por linha */
+}
+
+.form-group label {
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23.74px;
+  color: #676363;
+  margin-bottom: 5px;
+  margin-top: 20px;
+}
+
+/* ✅ Estilização padrão dos inputs e selects */
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.form-group select {
+  width: 50%;
+  height: 40px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.form-group input::placeholder,
+.form-group select::placeholder {
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #676363;
+  opacity: 0.5;
+}
+
+/* ✅ Estilização específica para os campos de preço */
+.form-group.preco .input-group {
+  height: 20px;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.form-group.preco .prefix {
+  font-weight: bold;
+  color: #999999;
+  margin-right: 5px;
+}
+
+.form-group.preco .input-group input {
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  color: #676363;
+  width: 100%;
+  outline: none;
+  text-align: left;
+}
+
+/* ✅ Seções adicionais */
+/* ✅ Estilização da Section Title */
+.section-title {
+  font-family: "Roboto Slab", serif; /* ✅ Fonte correta */
+  font-weight: 700; /* ✅ Peso da fonte */
+  font-size: 24px; /* ✅ Tamanho da fonte */
+  line-height: 31.65px; /* ✅ Altura da linha */
+  color: #3b447b; /* ✅ Cor exata */
+  height: 32px; /* ✅ Altura exata */
+  margin-bottom: 10px;
+}
+
+.section-title2 {
+  font-family: "Roboto Slab", serif; /* ✅ Fonte correta */
+  font-weight: 700; /* ✅ Peso da fonte */
+  font-size: 24px; /* ✅ Tamanho da fonte */
+  line-height: 31.65px; /* ✅ Altura da linha */
+  color: #3b447b; /* ✅ Cor exata */
+  height: 32px; /* ✅ Altura exata */
+  margin-bottom: 10px;
+  margin-top: 25px;
+}
+
+.tabs-dividerDisperdicio {
+  background: linear-gradient(to right, #07aba0, #cccccc, #999999);
+  margin-top: 100px;
+  height: 1px;
+}
+
+.section-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, #07aba0, #cccccc, #999999);
+  margin: 15px 0;
+}
+
+/* ✅ Inputs com unidade (Kg, cm, un) */
+.input-group {
+  display: flex;
+  align-items: center;
+  position: relative;
+  text-align: center;
+}
+
+.containerProducao {
+  display: flex;
+  gap: 60px; /* Ajusta o espaçamento entre os textos */
+  align-items: center; /* Alinha verticalmente */
+}
+
+/* Informações da Máquina e Operador */
+.info-box {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.info-operador {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 20px;
+}
+
+.textoAbaixo,
+.textoProducao {
+  display: flex;
+  flex-direction: column; /* Mantém os spans um abaixo do outro */
+}
+
+.input-group .unit {
+  position: absolute;
+  right: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #999999;
+  background: #d9d9d9;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* ✅ Imagem centralizada à direita */
+.dimensoes-imagem {
+  flex: 1; /* ✅ Garante que a imagem ocupe espaço proporcional */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* ✅ Centraliza a imagem */
+}
+/* ✅ Botões */
+.form-actions {
+  display: flex;
+  gap: 15px;
+}
+
+/* ✅ Botão "Salvar" */
+.salvar-btn {
+  width: 140px; /* ✅ Largura fixa */
+  height: 38px; /* ✅ Altura fixa */
+  background-color: #3b447b; /* ✅ Cor exata */
+  color: white;
+  border: none;
+  border-radius: 50px; /* ✅ Borda arredondada */
+  padding: 5px; /* ✅ Espaçamento interno */
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* ✅ Espaço entre o ícone e o texto */
+  transition: background 0.3s ease-in-out;
+}
+
+.salvar-btn:hover {
+  background-color: #2e365f; /* ✅ Efeito ao passar o mouse */
+}
+
+/* 📲 Responsividade */
+@media (max-width: 768px) {
+  .salvar-btn {
+    width: 100%; /* ✅ Ocupa a largura total em telas menores */
+  }
+}
+
+/* ✅ Ajuste para aumentar o tamanho do input "Descrição" */
+.form-group.descricao {
+  flex: 2; /* ✅ Aumenta o espaço ocupado pelo campo */
+}
+.cancelar-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: #3b447b;
+  cursor: pointer;
+}
+
+/* ✅ Ajuste ao passar o mouse */
+.salvar-btn:hover {
+  background-color: #2e365f;
+}
+
+.cancelar-btn:hover {
+  color: #2e365f;
+}
+
+/*          */
+/*          */
+/* PRODUÇÃO */
+/*          */
+/*          */
+/* ✅ Estilização da tabela de produtos */
+.tabela-producoes-container {
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #fff;
+  gap: 15px;
+}
+
+.tabela-producoes {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabela-producoes th,
+.tabela-producoes td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid black;
+}
+
+.acoes-container {
+  display: flex;
+}
+
+.acoes-btnModal {
+  border: none;
+  background: none;
+}
+
+.acoes-btn {
+  background: none;
+  border: 1px solid #3b447b;
+  color: #3b447b;
+  border-radius: 50px;
+  cursor: pointer;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 15px;
+}
+
+.acoes-btn:hover {
+  background: linear-gradient(
+    180deg,
+    #777777,
+    #bbbbbb
+  ); /* Gradiente mais escuro no hover */
+}
+
+/* ✅ Estilização dos cabeçalhos (th) */
+.tabela-producoes th {
+  background-color: #f9f9f9;
+  font-family: "Roboto Slab", serif;
+  font-weight: 400; /* ✅ Peso da fonte */
+  font-size: 18px; /* ✅ Tamanho da fonte */
+  line-height: 23.74px; /* ✅ Altura da linha */
+  color: #676363; /* ✅ Cor conforme a imagem */
+  text-transform: none; /* ✅ Mantém o texto normal */
+  padding: 8px 12px; /* ✅ Ajuste de espaçamento interno */
+  border: 1px solid black;
+}
+
+/* ✅ Inputs dentro da tabela */
+.tabela-producoes input {
+  height: 35px;
+  border: 1px solid transparent;
+  border-image: linear-gradient(to right, #999999, #cccccc, #999999) 1;
+  background: #ffffff;
+  font-size: 16px;
+  padding: 5px;
+  border-radius: 5px;
+  outline: none;
+}
+
+.input-producoes {
+  width: 500px;
+}
+
+.input-unidade,
+.input-quantidade {
+  width: 80px;
+}
+
+.input-group.input-custo {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.input-group.input-custo .prefix {
+  font-weight: bold;
+  color: #999999;
+  margin-right: 5px;
+}
+
+.input-total {
+  width: 80px;
+  background: #f2f2f2;
+  color: #999;
+  pointer-events: none;
+}
+
+/* ✅ Botão "Salvar" na tabela */
+.save-btn {
+  width: 70px;
+  height: 30px;
+  background-color: #3b447b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.save-btn:hover {
+  background-color: #2e365f;
+}
+
+/* ✅ Container para alinhar os botões "Salvar" e "Excluir" lado a lado */
+.botoes-acoes {
+  display: flex;
+  gap: 10px; /* Espaçamento entre os botões */
+}
+
+/* ✅ Botão "Excluir" (estilização igual ao "Salvar", mas vermelho) */
+.delete-btn {
+  background-color: #d9534f; /* ✅ Cor vermelha para deletar */
+  color: white;
+  width: 70px; /* ✅ Mesmo tamanho do "Salvar" */
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+/* ✅ Efeito hover para o botão "Excluir" */
+.delete-btn:hover {
+  background-color: #c9302c; /* ✅ Tom mais escuro ao passar o mouse */
+}
+
+/* ✅ Linha Totais */
+.totais-label {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* ✅ Botões abaixo da tabela */
+/* ✅ Botões abaixo da tabela */
+.estrutura-actions {
+  display: flex;
+  gap: 30px; /* ✅ Ajusta o espaçamento entre os botões */
+  margin-top: 15px;
+}
+
+/* ✅ Estilização específica para os botões */
+.add-item-btn,
+.update-cost-btn {
+  background: none;
+  border: none;
+  font-family: "Roboto Slab", serif; /* ✅ Fonte correta */
+  font-weight: 700; /* ✅ Peso da fonte */
+  font-size: 16px; /* ✅ Tamanho da fonte */
+  line-height: 21.1px; /* ✅ Altura da linha */
+  color: #07aba0; /* ✅ Cor exata */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none; /* ✅ Remove sublinhado */
+  transition: color 0.3s ease-in-out;
+}
+
+/* ✅ Efeito ao passar o mouse */
+.add-item-btn:hover,
+.update-cost-btn:hover {
+  color: #056b68;
+}
+
+/* 📲 Responsividade */
+@media (max-width: 1024px) {
+  .novo-producoes-container {
+    max-width: 90%;
+    padding: 0 15px;
+  }
+
+  .novo-producoes-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .novo-producoes-title {
+    font-size: 28px;
+  }
+
+  .back-button {
+    width: 120px;
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .tabs {
+    gap: 15px;
+  }
+
+  .tab {
+    font-size: 18px;
+  }
+
+  .form-row,
+  .form-row2 {
+    gap: 15px;
+  }
+
+  .form-group {
+    width: calc(50% - 15px); /* Divide os inputs em 2 colunas */
+  }
+
+  .input-group input {
+    width: 100%;
+  }
+
+  .input-group .unit {
+    right: 5px;
+  }
+
+  .tabela-producoes-container {
+    overflow-x: auto; /* Adiciona rolagem horizontal */
+    -webkit-overflow-scrolling: touch; /* Melhora a rolagem em dispositivos móveis */
+  }
+
+  .tabela-producoes {
+    min-width: 600px; /* Define uma largura mínima para a tabela */
+  }
+
+  .input-producoes {
+    width: 100%;
+  }
+
+  .input-unidade,
+  .input-quantidade {
+    width: 70px;
+  }
+
+  .input-group.input-custo {
+    width: 80px;
+  }
+
+  .input-total {
+    width: 70px;
+  }
+
+  .save-btn,
+  .delete-btn {
+    width: 60px;
+    font-size: 12px;
+  }
+
+  .estrutura-actions {
+    gap: 15px;
+  }
+
+  .add-item-btn,
+  .update-cost-btn {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .novo-producoes-container {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .novo-producoes-title {
+    font-size: 24px;
+  }
+
+  .back-button {
+    width: 100px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .tabs {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .tab {
+    font-size: 16px;
+  }
+
+  .form-row,
+  .form-row2 {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .form-group {
+    width: 100%;
+  }
+
+  .input-group input {
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .input-group .unit {
+    font-size: 14px;
+  }
+
+  .tabela-producoes th,
+  .tabela-producoes td {
+    font-size: 14px;
+    padding: 6px 8px;
+  }
+
+  .input-producoes {
+    width: 100%;
+  }
+
+  .input-unidade,
+  .input-quantidade {
+    width: 60px;
+  }
+
+  .input-group.input-custo {
+    width: 70px;
+  }
+
+  .input-total {
+    width: 60px;
+  }
+
+  .save-btn,
+  .delete-btn {
+    width: 50px;
+    font-size: 10px;
+  }
+
+  .estrutura-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .add-item-btn,
+  .update-cost-btn {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .novo-producoes-title {
+    font-size: 20px;
+  }
+
+  .back-button {
+    width: 90px;
+    height: 28px;
+    font-size: 12px;
+  }
+
+  .tab {
+    font-size: 14px;
+  }
+
+  .form-group input,
+  .form-group select {
+    height: 25px;
+    font-size: 12px;
+  }
+
+  .input-group input {
+    height: 25px;
+    font-size: 12px;
+  }
+
+  .input-group .unit {
+    font-size: 12px;
+  }
+
+  .tabela-producoes th,
+  .tabela-producoes td {
+    font-size: 12px;
+    padding: 4px 6px;
+  }
+
+  .input-producoes {
+    width: 100%;
+  }
+
+  .input-unidade,
+  .input-quantidade {
+    width: 50px;
+  }
+
+  .input-group.input-custo {
+    width: 60px;
+  }
+
+  .input-total {
+    width: 50px;
+  }
+
+  .save-btn,
+  .delete-btn {
+    width: 40px;
+    font-size: 8px;
+  }
+
+  .add-item-btn,
+  .update-cost-btn {
+    font-size: 10px;
+  }
+}
+
+/* ✅ Índice de Desperdício */
+.indice-desperdicio {
+  margin-top: 75px;
+}
+
+select[name="porcentagem"] {
+  margin-top: 50px;
+}
+
+/* ✅ Estilização do campo de porcentagem */
+.form-group.porcentagem {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+}
+
+/* ✅ Estilização do input com unidade (%) */
+.form-group.porcentagem .input-group {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.form-group.porcentagem .input-group input {
+  width: 100%;
+  height: 35px;
+  border: 1px solid transparent;
+  border-image: linear-gradient(to right, #999999, #cccccc, #999999) 1;
+  background: #ffffff;
+  font-size: 16px;
+  padding: 8px;
+  border-radius: 5px;
+  outline: none;
+  text-align: left;
+}
+
+.divider-tabela {
+  width: 100%;
+  height: 1px;
+  margin-top: 250px;
+  background: linear-gradient(to right, #999999, #cccccc, #999999);
+  border: none;
+  display: block;
+}
+
+.form-group.porcentagem .unit {
+  position: absolute;
+  right: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #999999;
+  background: #d9d9d9;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.tabela-eventos {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabela-eventos thead {
+  background-color: #f8f8f8;
+  font-weight: bold;
+}
+
+.tabela-eventos td {
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23.74px;
+  color: #000000;
+  padding: 8px;
+  text-align: left;
+  width: 90px; /* Define uma largura padrão conforme a imagem */
+  height: 24px;
+  border-bottom: 2px solid #ddd;
+}
+
+.tabela-eventos th {
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23.74px;
+  color: #676363;
+  text-align: left;
+  padding: 8px;
+  background-color: #f8f8f8;
+  border-bottom: 2px solid #ddd;
+}
+
+.tabela-eventos th input[type="checkbox"] {
+  margin: 0;
+}
+
+.tabela-eventos tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.tabela-eventos input[type="checkbox"] {
+  width: 21px;
+  height: 19px;
+  border: 2px solid #999999;
+  border-radius: 5px;
+  background-color: #ffffff;
+  cursor: pointer;
+  appearance: none; /* Remove o estilo padrão */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilo quando marcado */
+.tabela-eventos input[type="checkbox"]:checked {
+  background-color: #999999;
+  border-color: #999999;
+}
+
+/* Opcional: Adicionar um ícone ou estilizar o check */
+.tabela-eventos input[type="checkbox"]:checked::before {
+  content: "✔";
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Fundo escurecido quando a modal estiver aberta */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Caixa da modal */
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+/* Botão de fechar */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Opções da modal */
+.modal-option {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Alinha ícone e texto */
+  gap: 8px;
+  height: 35px; /* Definido pela imagem */
+  font-family: "Roboto Slab", serif; /* Fonte */
+  font-size: 20px; /* Tamanho da fonte */
+  font-weight: 500; /* Peso da fonte */
+  line-height: 21.1px; /* Espaçamento entre linhas */
+  color: #000000; /* Cor do texto */
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 10px auto; /* Centraliza os botões verticalmente */
+}
+
+.modal-option:hover {
+  background: #f0f0f0;
+  border-radius: 5px;
+}
+
+/* Sidebar na DIREITA */
+.sidebar-right {
+  position: fixed;
+  top: 0;
+  right: -1075px; /* Sidebar começa totalmente fora da tela */
+  width: 710px;
+  height: 1024px;
+  background: #fff;
+  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  z-index: 1000;
+  opacity: 0;
+  transition: right 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Quando o sidebar estiver aberto */
+.sidebar-right.open {
+  right: 0; /* Sidebar entra na tela */
+  opacity: 1;
+  width: 1075px;
+}
+
+/* Efeito de saída ao fechar */
+.sidebar-right.closing {
+  right: -1075px; /* Sidebar sai suavemente da tela */
+  opacity: 0;
+}
+
+/* Estilo do título "Lançamento estoque" */
+.texto-estoque {
+  height: 37px; /* Altura conforme imagem */
+  font-family: "Roboto Slab", serif; /* Fonte conforme imagem */
+  font-weight: 700; /* Negrito */
+  font-size: 28px; /* Tamanho da fonte */
+  line-height: 36.93px; /* Altura da linha */
+  letter-spacing: 0%; /* Sem espaçamento extra */
+  color: #3b447b; /* Cor do texto */
+  text-align: left;
+  margin-top: 43px; /* Ajuste conforme a posição */
+}
+
+/* Cabeçalho */
+.sidebar-header2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.sidebar-header h2 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.image {
+  cursor: pointer;
+}
+
+.subtexto {
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 19.78px;
+  color: #676363;
+  width: 492px;
+  height: 20px;
+  top: 76px;
+  left: 402px;
+}
+
+.sidebar-header p {
+  font-size: 14px;
+  color: #666;
+}
+.close-sidebar {
+  background: #3b447b;
+  color: white;
+  border: none;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 50px;
+  cursor: pointer;
+  width: 140px;
+  height: 38px;
+  top: 33px;
+  left: 1262px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.close-sidebar:hover {
+  background: #292d52;
+}
+
+/* Tabela */
+.sidebar-table {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+.sidebar-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.sidebar-table td {
+  padding: 10px;
+  text-align: left;
+}
+
+/* Estilização dos cabeçalhos da tabela */
+.sidebar-table th {
+  width: 67px; /* Largura conforme imagem */
+  height: 24px; /* Altura conforme imagem */
+  font-family: "Roboto Slab", serif; /* Fonte conforme imagem */
+  font-weight: 400; /* Peso normal */
+  font-size: 18px; /* Tamanho da fonte */
+  line-height: 23.74px; /* Altura da linha */
+  letter-spacing: 0%; /* Sem espaçamento extra */
+  color: #676363; /* Cor do texto */
+  text-align: left;
+  padding: 10px;
+  background: #f4f4f4;
+  border-bottom: 2px solid #ccc;
+}
+
+.sidebar-table th {
+  background: #f4f4f4;
+  font-weight: bold;
+}
+
+.sidebar-table select {
+  width: 120px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* .sidebar-table input {
+  width: 100px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+} */
+
+/* Campo de Produto desabilitado */
+.disabled-inputproduto {
+  width: 372px; /* Largura conforme imagem */
+  height: 50px; /* Altura conforme imagem */
+  background: #d9d9d9; /* Cor de fundo conforme imagem */
+  border: 1px solid #999999; /* Borda inicial */
+  opacity: 0.5; /* Opacidade 50% */
+  font-weight: bold;
+  color: #666;
+  cursor: not-allowed;
+
+  /* Gradiente na borda */
+  border-image: linear-gradient(to bottom, #999999, #cccccc, #999999) 1;
+}
+
+.motorista-titulo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+}
+
+/* Campo de Lote */
+.input-lote {
+  width: 167px; /* Largura conforme imagem */
+  height: 50px; /* Altura conforme imagem */
+  border: 1px solid #999999; /* Borda padrão */
+  font-weight: bold;
+  color: #333;
+  border-radius: 5px;
+
+  /* Gradiente na borda */
+  border-image: linear-gradient(to bottom, #999999, #cccccc, #999999) 1;
+}
+
+/* Campo de seleção Linha */
+.select-linha {
+  width: 119px; /* Largura conforme imagem */
+  height: 50px; /* Altura conforme imagem */
+  border: 1px solid #999999; /* Borda padrão */
+  text-align: center; /* Alinhamento do texto */
+  font-weight: bold;
+  color: #333;
+  border-radius: 5px;
+  background: #fff;
+  cursor: pointer;
+
+  /* Gradiente na borda */
+  border-image: linear-gradient(to bottom, #999999, #cccccc, #999999) 1;
+}
+
+/* Ajustando a aparência do select */
+.select-linha select {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  appearance: none; /* Remove a aparência padrão do select */
+  padding: 0 10px;
+}
+
+/* Campo de Quantidade */
+.input-quantidadesidebar {
+  width: 98px; /* Largura conforme imagem */
+  height: 50px; /* Altura conforme imagem */
+  border: 1px solid #999999; /* Borda padrão */
+  font-weight: bold;
+  color: #333;
+  border-radius: 5px;
+  background: #fff;
+
+  /* Gradiente na borda */
+  border-image: linear-gradient(to bottom, #999999, #cccccc, #999999) 1;
+}
+
+/* Ajuste para o input */
+.input-quantidadesidebar input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  padding: 0 5px;
+}
+
+/* Campo de seleção Depósito */
+.select-depositosidebar {
+  width: 119px; /* Largura conforme imagem */
+  height: 50px; /* Altura conforme imagem */
+  border: 1px solid #999999; /* Borda padrão */
+  font-weight: bold;
+  color: #333;
+  border-radius: 5px;
+  background: #fff;
+  cursor: pointer;
+
+  /* Gradiente na borda */
+  border-image: linear-gradient(to bottom, #999999, #cccccc, #999999) 1;
+}
+
+/* Ajustando a aparência do select */
+.select-depositosidebar select {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  appearance: none; /* Remove a aparência padrão do select */
+  padding: 0 10px;
+}
+
+/* Botão de adicionar linha */
+.add-row-btn {
+  background: #3d4373;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 10px;
+}
+.add-row-btn:hover {
+  background: #292d52;
+}
+
+/* Rodapé */
+.sidebar-footer {
+  margin-top: auto;
+  padding-top: 350px;
+}
+
+.save-btnSidebar {
+  background: #3d4373;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.save-btn:hover {
+  background: #292d52;
+}
+
+/* Adiciona borda vermelha nos inputs com erro */
+.input-error {
+  border: 2px solid red !important;
+  background-color: #ffe6e6;
+  transition: border 0.3s ease-in-out;
+}
+
+/* Mensagem de erro em vermelho abaixo do campo */
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}

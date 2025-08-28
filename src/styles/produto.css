@@ -1,0 +1,590 @@
+/* ✅ Container principal */
+.produtos-container {
+  width: 100%;
+  max-width: 1042px;
+  margin: 40px auto;
+  text-align: left;
+  padding: 0 10px;
+}
+
+/* ✅ Ajuste do cabeçalho */
+.produtos-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* ✅ Título "Produtos" */
+.produtos-title {
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 42.2px;
+  color: #3b447b;
+}
+
+/* ✅ Botões de ação (Incluir Produto + Ações) */
+.acoes-container {
+  display: flex;
+  gap: 10px;
+}
+
+/* ✅ Botões "Incluir Produto" e "Ações" */
+.add-produto-btn,
+.acoes-btn {
+  background-color: #3b447b;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: background 0.3s ease-in-out;
+}
+
+/* ✅ Ajuste específico para o botão "Ações" */
+.acoes-btn {
+  background: transparent;
+  border: 1px solid #3b447b;
+  color: #3b447b;
+}
+
+/* ✅ Hover para os botões */
+.add-produto-btn:hover {
+  background-color: #2e365f;
+}
+
+.acoes-btn:hover {
+  background: linear-gradient(
+    180deg,
+    #777777,
+    #bbbbbb
+  ); /* Gradiente mais escuro no hover */
+}
+
+/* ✅ Campo de pesquisa + Filtros */
+.pesquisa-e-filtros {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* ✅ Campo de pesquisa */
+.produtos-form {
+  display: flex;
+  align-items: center;
+  background-color: #d9d9d9;
+  border-radius: 5px;
+  padding: 11px;
+  width: 500px;
+  height: 30px;
+  opacity: 0.67;
+  position: relative;
+}
+
+.motorista-titulo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+}
+
+/* ✅ Input do campo de pesquisa */
+.produtos-form input {
+  width: 100%;
+  height: 21px;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #2d2727;
+  padding-right: 35px;
+}
+
+/* ✅ Ícone de pesquisa */
+.produtos-form .search-icon {
+  color: #999999;
+  position: absolute;
+  right: 12px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* ✅ Botões de filtro */
+.filtros {
+  display: flex;
+  gap: 10px;
+}
+
+.situacao-opcoes,
+.ordenacao-opcoes {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.situacao-btn,
+.ordenacao-btn {
+  background: transparent;
+  border: 1px solid #3b447b;
+  color: #3b447b;
+  border-radius: 50px;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* ✅ Estilização dos botões de filtro */
+.filtro-btn {
+  background: transparent;
+  border: 1px solid #3b447b;
+  color: #3b447b;
+  border-radius: 50px;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* ✅ Hover nos botões de filtro */
+.filtro-btn:hover {
+  background-color: #3b447b;
+  color: white;
+}
+
+/* ✅ Filtros de status */
+.status-filters {
+  display: flex;
+  gap: 40px; /* Espaçamento entre os itens */
+  margin: 30px 0;
+  font-size: 20px;
+  flex-wrap: wrap;
+}
+
+/* ✅ Estilização padrão dos spans dentro do status filter */
+.status-filters span {
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26.38px;
+  color: #676363; /* Cor padrão */
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.action-icon {
+  width: 40px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.nome-produto {
+  width: 5%;
+}
+
+/* ✅ Quando o filtro estiver ativo/selecionado */
+.status-filters span.active {
+  color: #3b447b; /* Cor conforme a imagem */
+  font-weight: bold;
+}
+
+/* ✅ Linha abaixo dos filtros de status */
+.status-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, #07aba0, #cccccc, #999999);
+  margin-top: 5px;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 0;
+}
+
+/* ✅ Linha acima da paginação */
+.pagination-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, #07aba0, #cccccc, #999999);
+  margin-top: 100px;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 0;
+}
+
+/* ✅ Tabela */
+.produtos-table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.produtos-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  min-width: 600px;
+}
+
+/* ✅ Estilização do cabeçalho da tabela */
+.produtos-table th {
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23.74px;
+  white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+  color: #676363;
+  white-space: nowrap;
+  text-align: left;
+  padding: 8px 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* ✅ Estilização do texto nas células da tabela */
+.produtos-table td {
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23.74px;
+  white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+  color: #000000;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 10px 25px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* ✅ Checkbox */
+.custom-checkbox {
+  width: 21px;
+  height: 19px;
+  border: 2px solid #999999;
+  background-color: #ffffff;
+  border-radius: 5px;
+  appearance: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.custom-checkbox:hover {
+  border-color: #777777;
+}
+
+.custom-checkbox:checked {
+  background-color: #07aba0;
+  border-color: #07aba0;
+  position: relative;
+}
+
+.custom-checkbox:checked::after {
+  content: "✔";
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ✅ Paginação */
+.pagination {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  font-size: 16px;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+
+/* 📲 Melhor responsividade */
+@media (max-width: 1024px) {
+  .produtos-container {
+    max-width: 90%;
+    padding: 0 15px;
+  }
+
+  .produtos-title {
+    font-size: 28px;
+  }
+
+  .produtos-form {
+    width: 100%;
+  }
+
+  .acoes-container {
+    gap: 8px;
+  }
+
+  .add-produto-btn,
+  .acoes-btn {
+    font-size: 12px;
+    padding: 4px 12px;
+  }
+
+  .filtro-btn {
+    font-size: 12px;
+    padding: 4px 10px;
+  }
+
+  .status-filters {
+    gap: 20px;
+  }
+
+  .status-filters span {
+    font-size: 16px;
+    padding: 4px 8px;
+  }
+
+  .produtos-table th,
+  .produtos-table td {
+    font-size: 16px;
+    padding: 6px 10px;
+  }
+
+  .pagination {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .produtos-container {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .produtos-title {
+    font-size: 24px;
+  }
+
+  .produtos-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .pesquisa-e-filtros {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .produtos-form {
+    width: 100%;
+    height: 35px;
+  }
+
+  .produtos-form input {
+    font-size: 14px;
+  }
+
+  .acoes-container {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .add-produto-btn,
+  .acoes-btn {
+    font-size: 12px;
+    padding: 4px 10px;
+  }
+
+  .filtros {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .filtro-btn {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  .status-filters {
+    gap: 10px;
+  }
+
+  .status-filters span {
+    font-size: 14px;
+    padding: 4px 8px;
+  }
+
+  .produtos-table th,
+  .produtos-table td {
+    font-size: 14px;
+    padding: 6px 8px;
+  }
+
+  .pagination {
+    font-size: 12px;
+  }
+
+  .modal-content {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .modal-option {
+    font-size: 16px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .produtos-title {
+    font-size: 20px;
+  }
+
+  .produtos-form {
+    height: 30px;
+  }
+
+  .produtos-form input {
+    font-size: 12px;
+  }
+
+  .add-produto-btn,
+  .acoes-btn {
+    font-size: 10px;
+    padding: 3px 8px;
+  }
+
+  .filtro-btn {
+    font-size: 10px;
+    padding: 3px 6px;
+  }
+
+  .status-filters {
+    gap: 5px;
+  }
+
+  .status-filters span {
+    font-size: 12px;
+    padding: 3px 6px;
+  }
+
+  .produtos-table th,
+  .produtos-table td {
+    font-size: 12px;
+    padding: 4px 6px;
+  }
+
+  .pagination {
+    font-size: 10px;
+  }
+
+  .modal-content {
+    width: 90%;
+    max-width: 250px;
+  }
+
+  .modal-option {
+    font-size: 14px;
+    height: 25px;
+  }
+}
+
+/* ✅ Responsividade da tabela */
+@media (max-width: 768px) {
+  .produtos-table th,
+  .produtos-table td {
+    font-size: 14px; /* Reduz o tamanho da fonte */
+    padding: 6px 10px; /* Reduz o padding */
+  }
+
+  .produtos-table {
+    min-width: 100%; /* Ajusta a largura mínima para ocupar 100% do contêiner */
+  }
+}
+
+@media (max-width: 480px) {
+  .produtos-table th,
+  .produtos-table td {
+    font-size: 12px; /* Reduz ainda mais o tamanho da fonte */
+    padding: 4px 8px; /* Reduz o padding */
+  }
+
+  .produtos-table-container {
+    overflow-x: scroll; /* Garante que a rolagem horizontal funcione */
+  }
+}
+
+/* Fundo escurecido quando a modal estiver aberta */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Caixa da modal */
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+/* Botão de fechar */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Opções da modal */
+.modal-option {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Alinha ícone e texto */
+  gap: 8px;
+  height: 35px; /* Definido pela imagem */
+  font-family: "Roboto Slab", serif; /* Fonte */
+  font-size: 20px; /* Tamanho da fonte */
+  font-weight: 500; /* Peso da fonte */
+  line-height: 21.1px; /* Espaçamento entre linhas */
+  color: #000000; /* Cor do texto */
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 10px auto; /* Centraliza os botões verticalmente */
+}
+
+.modal-option:hover {
+  background: #f0f0f0;
+  border-radius: 5px;
+}

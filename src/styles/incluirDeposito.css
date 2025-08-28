@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap");
+
+/* ✅ Container principal */
+.incluir-deposito-container {
+  width: 100%;
+  max-width: 1042px;
+  margin: 40px auto;
+  padding: 0 10px;
+  text-align: left;
+}
+
+/* ✅ Cabeçalho */
+.incluir-deposito-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.incluir-deposito-title {
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  font-size: 28px;
+  color: #3b447b;
+}
+
+/* ✅ Efeito ao focar no input */
+#nome:focus {
+  border: 1px solid #3b447b;
+}
+
+/* ✅ Efeito ao focar no input */
+#codigo:focus {
+  border: 1px solid #3b447b;
+}
+
+/* ✅ Efeito ao focar no select */
+#situacao:focus {
+  border: 1px solid #3b447b;
+}
+
+/* ✅ Botão "Voltar" */
+.voltar-button {
+  background-color: #3b447b;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  width: 100px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.botoesOrganizar {
+  display: flex;
+  gap: 15px;
+}
+
+.voltar-button:hover {
+  background-color: #2e365f;
+}
+
+/* ✅ Linha separadora */
+.status-divider {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #07aba0, #cccccc, #999999);
+  border: none;
+  margin: 10px 0;
+}
+
+/* ✅ Formulário */
+.incluir-deposito-form {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+/* ✅ Estilização dos grupos de formulário */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* ✅ Labels dos Inputs */
+.form-group label {
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #676363;
+  margin-bottom: 5px;
+}
+
+.form-group select {
+  width: 50%;
+  height: 40px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+}
+
+input[name="nome"] {
+  width: 70%;
+}
+
+input[name="codigo"] {
+  width: 40%;
+}
+
+/* ✅ Estilização do campo Código */
+.codigo-input {
+  background-color: #e5e5e5;
+  color: #676363;
+}
+
+/* ✅ Botões */
+.botoes-container {
+  flex: 2;
+  margin-top: 500px;
+}
+
+/* ✅ Botão "Salvar" */
+.salvar-button {
+  background-color: #3b447b;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  width: 100px;
+  height: 38px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.salvar-button:hover {
+  background-color: #2e365f;
+}
+
+/* ✅ Botão "Cancelar" */
+.cancelar-button {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: #3b447b;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.cancelar-button:hover {
+  color: #2e365f;
+}
+
+/* 📲 Responsividade */
+@media (max-width: 768px) {
+  .incluir-deposito-form {
+    flex-direction: column;
+  }
+
+  .botoes-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .salvar-button,
+  .cancelar-button {
+    width: 100%;
+  }
+}

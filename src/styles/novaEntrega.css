@@ -1,0 +1,656 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap");
+
+.nova-entrega-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+  text-align: left;
+  padding: 0 10px;
+}
+
+/* ✅ Cabeçalho */
+.nova-entrega-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.nova-entrega-title {
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  font-size: 28px;
+  color: #3b447b;
+}
+
+/* ✅ Seções do formulário */
+
+.cliente-novaEntrega {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.dados-gerais {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* ✅ Organizamos os inputs em duas linhas de 5 colunas */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 colunas */
+  gap: 45px; /* Espaçamento entre os inputs */
+  align-items: center;
+}
+
+/* ✅ Estilos das labels */
+.form-group label {
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #676363;
+  margin-bottom: 5px;
+}
+
+/* ✅ Formatação correta para cada grupo (label + input) */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group-container {
+  display: flex;
+  gap: 45px; /* Espaço entre os campos */
+  align-items: center;
+}
+
+.dados-gerais-title {
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26.38px;
+  color: #3b447b;
+  width: 120px;
+  height: 26px;
+  top: 145px;
+  left: 332px;
+}
+
+.cliente-novaEntrega-title {
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26.38px;
+  color: #3b447b;
+  height: 26px;
+  top: 145px;
+  left: 332px;
+}
+
+.add-novaEntrega-btn,
+.acoes-novaEntrega-btn {
+  background-color: #3b447b;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 4px 15px;
+  font-size: 16px;
+  display: flex;
+  gap: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  align-items: center;
+  transition: background 0.3s ease-in-out;
+}
+
+.acoes-container {
+  display: flex;
+  gap: 15px;
+}
+
+.add-novaEntrega-btn:hover {
+  background-color: #2e365f; /* Cor um pouco mais escura no hover */
+}
+
+.acoes-novaEntrega-btn:hover {
+  background: linear-gradient(
+    180deg,
+    #777777,
+    #bbbbbb
+  ); /* Gradiente mais escuro no hover */
+}
+
+.acoes-novaEntrega-btn {
+  background: transparent;
+  border: 1px solid #3b447b;
+  color: #3b447b;
+  display: flex;
+}
+
+.dados-gerais h2,
+.cliente-novaEntrega h2 {
+  font-family: "Roboto Slab", serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #3b447b;
+  margin-bottom: 10px;
+}
+
+/* ✅ Grid para organização dos campos */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  align-items: center;
+}
+
+.form-group select {
+  width: 60%;
+  height: 40px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.select {
+  cursor: pointer;
+}
+
+input[name="uf"] {
+  width: 40%;
+}
+
+/* ✅ Ajuste para o campo de Valor do Frete */
+
+input:focus,
+select:focus {
+  border: 1px solid #3b447b;
+}
+
+/* ✅ Campos desabilitados */
+input[disabled] {
+  background-color: #e0e0e0;
+  color: #676363;
+}
+
+/* ✅ Campos da seção Cliente | Produtos */
+.cliente-novaEntrega .grid-container {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* ✅ Tabela de produtos */
+.tabela-novaEntrega-container {
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #fff;
+  gap: 15px;
+}
+
+.tabela-novaEntrega {
+  border: 1px solid #ccc;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabela-novaEntrega th,
+.tabela-novaEntrega td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+/* ✅ Estilização dos cabeçalhos (th) */
+.tabela-novaEntrega th {
+  background-color: #f9f9f9;
+  font-family: "Roboto Slab", serif;
+  font-weight: 400; /* ✅ Peso da fonte */
+  font-size: 18px; /* ✅ Tamanho da fonte */
+  line-height: 23.74px; /* ✅ Altura da linha */
+  color: #676363; /* ✅ Cor conforme a imagem */
+  text-transform: none; /* ✅ Mantém o texto normal */
+  padding: 8px 12px; /* ✅ Ajuste de espaçamento interno */
+}
+
+.status-divider {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #07aba0, #ccc, #999);
+  margin-top: 5px;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 0;
+}
+
+/* ✅ Inputs dentro da tabela */
+.tabela-novaEntrega input {
+  height: 35px;
+  border: 1px solid transparent;
+  border-image: linear-gradient(to right, #999999, #cccccc, #999999) 1;
+  background: #ffffff;
+  font-size: 16px;
+  padding: 5px;
+  border-radius: 5px;
+  outline: none;
+}
+
+.lote {
+  width: 300px;
+  height: 55px;
+  cursor: pointer;
+  background: transparent;
+}
+
+select option {
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  color: #676363;
+  width: 168px;
+  height: 21px;
+  opacity: 0.5;
+}
+
+/* ✅ Botão "Salvar" na tabela */
+.save-btn {
+  width: 70px;
+  height: 30px;
+  background-color: #3b447b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.save-btn:hover {
+  background-color: #2e365f;
+}
+
+.novaEntrega-title {
+  font-family: "Roboto Slab", serif;
+  font-weight: 700; /* Negrito */
+  font-size: 28px;
+  line-height: 100%; /* Garante que a altura da linha seja exatamente 28px */
+  letter-spacing: 0;
+  color: #3b447b; /* Cor do texto */
+  height: 37px;
+}
+
+.novaEntrega-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ✅ Container para alinhar os botões "Salvar" e "Excluir" lado a lado */
+.botoes-acoes {
+  display: flex;
+  gap: 10px; /* Espaçamento entre os botões */
+}
+
+/* ✅ Botão "Excluir" (estilização igual ao "Salvar", mas vermelho) */
+.delete-btn {
+  background-color: #d9534f; /* ✅ Cor vermelha para deletar */
+  color: white;
+  width: 70px; /* ✅ Mesmo tamanho do "Salvar" */
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+/* ✅ Efeito hover para o botão "Excluir" */
+.delete-btn:hover {
+  background-color: #c9302c; /* ✅ Tom mais escuro ao passar o mouse */
+}
+
+/* ✅ Linha Totais */
+.totais-label {
+  font-weight: bold;
+  font-size: 16px;
+  color: #3b447b;
+}
+
+.adicionar-item {
+  /* width: 111px; */
+  /* height: 21px; */
+  background-color: transparent;
+  color: #07aba0;
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21.1px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  gap: 5px;
+  transition: color 0.3s ease-in-out;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.adicionar-item:hover {
+  color: #048f88;
+}
+
+.adicionar-item svg {
+  margin-right: 5px;
+}
+
+/* ✅ Rodapé da tabela */
+.totalizador {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #676363;
+  margin-top: 10px;
+}
+
+/* ✅ Botões de ação */
+.botoes-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.nova-entrega-title {
+  font-family: Roboto Slab, serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 42.2px;
+  color: #3b447b;
+}
+
+.salvar-button,
+.finalizar-button {
+  width: 116px;
+  height: 38px;
+  background-color: #07aba0;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: background 0.3s ease-in-out;
+}
+
+.finalizar-button:hover {
+  background-color: #048f88;
+}
+
+.salvar-button {
+  background-color: #3b447b;
+}
+
+.salvar-button:hover {
+  background-color: #2e365f;
+}
+
+.finalizar-button:hover {
+  background-color: #056f63;
+}
+
+/* 📲 Responsividade */
+@media (max-width: 1024px) {
+  .nova-entrega-container {
+    max-width: 90%;
+    padding: 0 15px;
+  }
+
+  .nova-entrega-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .nova-entrega-title {
+    font-size: 24px;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cliente-novaEntrega .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .input-nome,
+  .input-cidade,
+  .input-gps {
+    width: 100%;
+  }
+
+  .input-uf {
+    width: 100%;
+  }
+
+  .input-num-pedido,
+  .input-nf-e {
+    width: 100%;
+  }
+
+  .tabela-novaEntrega-container {
+    overflow-x: auto; /* Adiciona rolagem horizontal */
+    -webkit-overflow-scrolling: touch; /* Melhora a rolagem em dispositivos móveis */
+  }
+
+  .tabela-novaEntrega {
+    min-width: 600px; /* Define uma largura mínima para a tabela */
+  }
+
+  .tabela-novaEntrega th,
+  .tabela-novaEntrega td {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .botoes-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .salvar-button,
+  .finalizar-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .nova-entrega-container {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .nova-entrega-title {
+    font-size: 20px;
+  }
+
+  .grid-container,
+  .cliente-novaEntrega .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .input-nome,
+  .input-cidade,
+  .input-gps,
+  .input-uf,
+  .input-num-pedido,
+  .input-nf-e {
+    width: 100%;
+  }
+
+  .tabela-novaEntrega th,
+  .tabela-novaEntrega td {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .salvar-button,
+  .finalizar-button {
+    height: 35px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nova-entrega-title {
+    font-size: 18px;
+  }
+
+  .input-nome,
+  .input-cidade,
+  .input-gps,
+  .input-uf,
+  .input-num-pedido,
+  .input-nf-e {
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .tabela-novaEntrega th,
+  .tabela-novaEntrega td {
+    font-size: 10px;
+    padding: 4px;
+  }
+
+  .salvar-button,
+  .finalizar-button {
+    height: 30px;
+    font-size: 12px;
+  }
+}
+
+.cliente-novaEntrega {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* ✅ Ajuste manual para cada input/select */
+/* ✅ Ajuste específico para o input Nome */
+
+/* ✅ Grid específico para os campos */
+.cliente-novaEntrega-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.3fr;
+  grid-template-rows: auto auto;
+  gap: 45px;
+  align-items: center;
+}
+
+/* ✅ Labels */
+.form-group label {
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #676363;
+  margin-bottom: 5px;
+}
+
+.entrega-titulo {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+/* Fundo escurecido quando a modal estiver aberta */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Caixa da modal */
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+/* Botão de fechar */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Opções da modal */
+.modal-option {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Alinha ícone e texto */
+  gap: 8px;
+  height: 35px; /* Definido pela imagem */
+  font-family: "Roboto Slab", serif; /* Fonte */
+  font-size: 20px; /* Tamanho da fonte */
+  font-weight: 500; /* Peso da fonte */
+  line-height: 21.1px; /* Espaçamento entre linhas */
+  color: #000000; /* Cor do texto */
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 10px auto; /* Centraliza os botões verticalmente */
+}
+
+.modal-option:hover {
+  background: #f0f0f0;
+  border-radius: 5px;
+}
+
+.entrega-titulo {
+  display: flex;
+  align-items: center; /* 🔹 Alinha a imagem com o texto */
+  gap: 8px; /* 🔹 Espaço entre a imagem e o texto */
+  justify-content: center;
+}

@@ -1,0 +1,443 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap");
+
+/* ✅ Container principal */
+.clientesNovo-container {
+  width: 100%;
+  max-width: 1042px;
+  margin: 40px auto;
+  text-align: left;
+}
+
+.clientsNovo-content {
+  min-height: 500px;
+  transition: opacity 0.2s ease-in-out;
+}
+
+/* ✅ Ajuste do cabeçalho */
+.clientesNovo-header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/* ✅ Título */
+/* ✅ Estilização para operadores-title */
+.clientesNovo-title {
+  width: 167px; /* Largura */
+  height: 37px; /* Altura */
+  font-family: "Roboto Slab", serif; /* Fonte específica */
+  font-weight: 700; /* Negrito */
+  font-size: 26px; /* Tamanho da fonte */
+  line-height: 36.93px; /* Espaçamento entre linhas */
+  color: #3b447b; /* Cor do texto */
+}
+
+/* ✅ Estilização do botão de voltar */
+.back-button {
+  height: 38px; /* Altura fixa */
+  background-color: #3b447b; /* Cor de fundo */
+  color: white; /* Cor do texto */
+  border: none; /* Remove a borda */
+  border-radius: 50px; /* Bordas arredondadas */
+  padding: 13px 47px; /* Padding conforme a imagem */
+  font-size: 20px; /* Tamanho do texto */
+  font-weight: 700; /* Negrito */
+  font-family: "Roboto Slab", serif; /* Fonte específica */
+  display: flex; /* Para centralizar o conteúdo */
+  align-items: center; /* Alinhamento vertical */
+  justify-content: center; /* Alinhamento horizontal */
+  cursor: pointer; /* Indica interatividade */
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* ✅ Efeito ao passar o mouse */
+.back-button:hover {
+  background-color: #2e365f; /* Um tom mais escuro ao passar o mouse */
+}
+
+/* ✅ Tabs de navegação */
+.tabs {
+  display: flex;
+  gap: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.tab {
+  width: 120px; /* Largura */
+  height: 26px; /* Altura */
+  font-family: "Roboto Slab", serif; /* Fonte específica */
+  font-weight: 700; /* Negrito */
+  font-size: 20px; /* Tamanho da fonte */
+  line-height: 26.38px; /* Espaçamento entre linhas */
+  color: #676363; /* Cor padrão da tab */
+  cursor: pointer; /* Cursor indicando clique */
+  text-align: center; /* Alinhamento do texto */
+  transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+}
+
+/* ✅ Quando a tab está ativa */
+.tab.active {
+  color: #3b447b; /* Cor ativa conforme a imagem */
+}
+
+.tab.inactive {
+  color: gray;
+}
+
+/* ✅ Formulário principal */
+.novo-operador-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* ✅ Linhas do formulário */
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+/* ✅ Define três colunas */
+.three-cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 70px;
+  margin-top: 20px;
+}
+
+/* ✅ Inputs */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.form-group select {
+  width: 50%;
+  height: 40px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+}
+
+/* ✅ Estilização para todas as labels */
+.form-group label {
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #676363;
+  margin-bottom: 5px;
+}
+
+input[name="nome"] {
+  width: 70%;
+}
+
+input[name="cnpjCpf"] {
+  width: 50%;
+}
+
+input[name="codigo"] {
+  width: 40%;
+}
+
+input[name="email"] {
+  width: 70%;
+}
+
+input[name="celular"] {
+  width: 50%;
+}
+
+/* ✅ Input desabilitado */
+input[disabled] {
+  background: #f0f0f0;
+  color: #888;
+}
+
+/* ✅ Linha separadora */
+.status-divider {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #07aba0, #cccccc, #999999);
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.status-divider2 {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #07aba0, #cccccc, #999999);
+  margin-top: 400px;
+  margin-bottom: 20px;
+}
+
+.status-divider3 {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #07aba0, #cccccc, #999999);
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+/* ✅ Estilização dos placeholders de todos os inputs */
+::placeholder {
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23.74px;
+  color: #676363;
+  opacity: 0.5;
+}
+
+/* Compatibilidade para diferentes navegadores */
+::-webkit-input-placeholder {
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23.74px;
+  color: #676363;
+  opacity: 0.5;
+}
+
+:-moz-placeholder {
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23.74px;
+  color: #676363;
+  opacity: 0.5;
+}
+
+::-moz-placeholder {
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23.74px;
+  color: #676363;
+  opacity: 0.5;
+}
+
+:-ms-input-placeholder {
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23.74px;
+  color: #676363;
+  opacity: 0.5;
+}
+
+/* ✅ Estilização das opções dentro do <select> */
+.input-situacao option {
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23.74px;
+  color: #676363;
+  opacity: 0.5;
+  text-align: center;
+}
+
+/* ✅ Botões */
+.buttons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+/* ✅ Estilização do botão salvar */
+.save-btn {
+  width: 140px; /* Largura fixa */
+  height: 38px; /* Altura fixa */
+  background-color: #3b447b; /* Cor de fundo */
+  color: white; /* Cor do texto */
+  border: none; /* Remove a borda */
+  border-radius: 50px; /* Bordas arredondadas */
+  padding: 5px; /* Padding conforme a imagem */
+  font-size: 20px; /* Tamanho do texto */
+  font-weight: 700; /* Negrito */
+  font-family: "Roboto Slab", serif; /* Fonte específica */
+  display: flex; /* Para centralizar o conteúdo */
+  align-items: center; /* Alinhamento vertical */
+  justify-content: center; /* Alinhamento horizontal */
+  cursor: pointer; /* Indica interatividade */
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* ✅ Efeito ao passar o mouse */
+.save-btn:hover {
+  background-color: #2e365f; /* Um tom mais escuro ao passar o mouse */
+}
+
+/* ✅ Estilização do botão cancelar */
+.cancel-btn {
+  width: 82px; /* Largura fixa */
+  height: 26px; /* Altura fixa */
+  background: none; /* Sem fundo */
+  color: #3b447b; /* Cor do texto */
+  border: none; /* Sem borda */
+  font-size: 20px; /* Tamanho da fonte */
+  font-weight: 700; /* Negrito */
+  font-family: "Roboto Slab", serif; /* Fonte específica */
+  line-height: 26.38px; /* Espaçamento entre linhas */
+  cursor: pointer; /* Indica interatividade */
+  transition: color 0.3s ease-in-out;
+}
+
+/* ✅ Efeito ao passar o mouse */
+.cancel-btn:hover {
+  color: #2e365f; /* Um tom mais escuro ao passar o mouse */
+}
+
+/* ✅ Responsividade */
+@media (max-width: 768px) {
+  .clientes-container {
+    max-width: 90%;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .three-cols {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ✅ Estilização da tabela de entregas */
+.entregas-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+/* ✅ Estilização dos cabeçalhos da tabela (th) */
+.entregas-table th {
+  width: 43px; /* Largura */
+  height: 24px; /* Altura */
+  font-family: "Roboto Slab", serif; /* Fonte específica */
+  font-weight: 400; /* Peso da fonte */
+  font-size: 18px; /* Tamanho da fonte */
+  line-height: 23.74px; /* Espaçamento entre linhas */
+  color: #676363; /* Cor do texto */
+  text-align: left; /* Alinhamento do texto */
+  padding: 10px; /* Espaçamento interno */
+  border-bottom: 2px solid #ddd; /* Linha inferior para separação */
+}
+
+/* ✅ Estilização das células da tabela (td) */
+.entregas-table td {
+  width: 90px; /* Largura */
+  height: 24px; /* Altura */
+  font-family: "Roboto Slab", serif; /* Fonte específica */
+  font-weight: 400; /* Peso da fonte */
+  font-size: 18px; /* Tamanho da fonte */
+  line-height: 23.74px; /* Espaçamento entre linhas */
+  color: #000000; /* Cor do texto */
+  text-align: left; /* Alinhamento do texto */
+  padding: 10px; /* Espaçamento interno */
+  border-bottom: 1px solid #ddd; /* Linha inferior para separação */
+}
+
+/* ✅ Rodapé da tabela */
+.paginacao {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.paginacao span {
+  width: 21px;
+  height: 24px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #676363;
+  text-align: center;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.paginacao span:hover {
+  color: #3b447b;
+}
+
+/* ✅ Estilização das checkboxes */
+input[type="checkbox"] {
+  width: 21px; /* Largura */
+  height: 19px; /* Altura */
+  border: 2px solid #999999; /* Borda de 2px com cor especificada */
+  background-color: #ffffff; /* Fundo branco */
+  border-radius: 5px; /* Bordas arredondadas */
+  appearance: none; /* Remove o estilo padrão do navegador */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer; /* Indica interatividade */
+}
+
+/* ✅ Efeito ao marcar a checkbox */
+input[type="checkbox"]:checked {
+  background-color: #3b447b; /* Cor de fundo ao ser marcada */
+  border-color: #3b447b;
+  position: relative;
+}
+
+/* ✅ Estiliza o check interno */
+input[type="checkbox"]:checked::after {
+  content: "✔";
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ✅ Alternando cores para as linhas */
+.entregas-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* ✅ Ajuste para responsividade */
+@media (max-width: 768px) {
+  .entregas-table th,
+  .entregas-table td {
+    font-size: 12px;
+    padding: 8px;
+  }
+}
+
+/* Adiciona borda vermelha nos inputs com erro */
+.input-error {
+  border: 2px solid red !important;
+  background-color: #ffe6e6;
+  transition: border 0.3s ease-in-out;
+}
+
+/* Mensagem de erro em vermelho abaixo do campo */
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}

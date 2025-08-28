@@ -1,0 +1,335 @@
+/* ✅ Sidebar Direito */
+.right-sidebar {
+  position: fixed;
+  top: 0;
+  right: -1024px;
+  width: 810px;
+  height: 1024px;
+  background: #ffffff;
+  box-shadow: -4px 0px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  z-index: 1000;
+  transition: right 0.3s ease-in-out;
+}
+
+/* ✅ Exibir sidebar quando aberto */
+.right-sidebar.open {
+  right: 0;
+}
+
+/* ✅ Conteúdo do Sidebar */
+.sidebar-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ✅ Botão de fechar */
+/* ✅ Estilização do Botão Fechar */
+.close-sidebar {
+  width: 140px;
+  height: 38px;
+  background-color: #3b447b;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  align-self: anchor-center;
+  top: 33px;
+  left: 1262px;
+  transition: background 0.3s ease-in-out;
+}
+
+.close-sidebar:hover {
+  background: #2e365f;
+}
+
+/* ✅ Título */
+.sidebar-content h2 {
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: #3b447b;
+  margin-bottom: 15px;
+}
+
+/* ✅ Linhas do formulário */
+.form-row {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 25px;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-family: "Roboto Slab", serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0;
+  color: #676363;
+  width: 98px;
+  height: 24px;
+  top: 220px;
+  left: 767px;
+}
+
+.rightHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+/* ✅ Inputs e Selects */
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  border-image: linear-gradient(to right, #999999, #cccccc, #999999) 1;
+  background: white;
+  font-size: 16px;
+  color: #000;
+  border-radius: 5px;
+}
+
+.input-deposito {
+  width: 180px;
+  height: 60px;
+}
+
+.input-linha {
+  width: 180px;
+  height: 60px;
+}
+
+.input-hora {
+  width: 180px;
+  height: 40px;
+}
+
+.input-date {
+  width: 180px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.input-tipo {
+  width: 180px;
+  height: 60px;
+}
+
+.input-lote {
+  width: 180px;
+  height: 60px;
+}
+
+.input-quantidade {
+  width: 150px;
+  height: 40px;
+}
+
+.form-group select {
+  cursor: pointer;
+}
+
+.form-group textarea {
+  height: 80px;
+  resize: none;
+  width: 95%;
+}
+
+/* ✅ Botões */
+.form-buttons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.salvar {
+  background-color: #3b447b;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.salvar:hover {
+  background-color: #2e365f;
+}
+
+.cancelar {
+  background: transparent;
+  border: 1px solid #3b447b;
+  color: #3b447b;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cancelar:hover {
+  background-color: #f5f5f5;
+}
+
+/* ===================== */
+/*    RESPONSIVIDADE     */
+/* ===================== */
+
+@media (max-width: 1200px) {
+  .right-sidebar {
+    width: 700px; /* Reduz a largura da sidebar */
+    right: -700px;
+  }
+
+  .right-sidebar.open {
+    right: 0;
+  }
+
+  .form-row {
+    gap: 20px; /* Reduz o espaçamento entre os campos */
+  }
+
+  .input-deposito,
+  .input-linha,
+  .input-tipo,
+  .input-lote {
+    width: 160px; /* Reduz a largura dos inputs */
+  }
+
+  .input-hora,
+  .input-date,
+  .input-quantidade {
+    width: 160px; /* Reduz a largura dos inputs */
+  }
+
+  .form-group textarea {
+    width: 90%; /* Ajusta a largura do textarea */
+  }
+}
+
+@media (max-width: 1024px) {
+  .right-sidebar {
+    width: 600px; /* Reduz ainda mais a largura da sidebar */
+    right: -600px;
+  }
+
+  .right-sidebar.open {
+    right: 0;
+  }
+
+  .form-row {
+    flex-direction: column; /* Coloca os campos em coluna */
+    gap: 15px;
+  }
+
+  .input-deposito,
+  .input-linha,
+  .input-tipo,
+  .input-lote,
+  .input-hora,
+  .input-date,
+  .input-quantidade {
+    width: 100%; /* Faz os inputs ocuparem 100% da largura */
+  }
+
+  .form-group textarea {
+    width: 100%; /* Faz o textarea ocupar 100% da largura */
+  }
+
+  .form-buttons {
+    flex-direction: column; /* Coloca os botões em coluna */
+    gap: 10px;
+  }
+
+  .salvar,
+  .cancelar {
+    width: 100%; /* Faz os botões ocuparem 100% da largura */
+  }
+}
+
+@media (max-width: 768px) {
+  .right-sidebar {
+    width: 100%; /* Ocupa toda a largura da tela */
+    height: 100vh; /* Ocupa toda a altura da tela */
+    right: -100%;
+    padding: 15px;
+  }
+
+  .right-sidebar.open {
+    right: 0;
+  }
+
+  .close-sidebar {
+    width: 120px; /* Reduz a largura do botão de fechar */
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .sidebar-content h2 {
+    font-size: 20px; /* Reduz o tamanho do título */
+  }
+
+  .form-group label {
+    font-size: 16px; /* Reduz o tamanho da fonte dos labels */
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 14px; /* Reduz o tamanho da fonte dos inputs */
+  }
+}
+
+@media (max-width: 480px) {
+  .right-sidebar {
+    padding: 10px;
+  }
+
+  .close-sidebar {
+    width: 100px; /* Reduz ainda mais a largura do botão de fechar */
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .sidebar-content h2 {
+    font-size: 18px; /* Reduz o tamanho do título */
+  }
+
+  .form-group label {
+    font-size: 14px; /* Reduz o tamanho da fonte dos labels */
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 12px; /* Reduz o tamanho da fonte dos inputs */
+  }
+
+  .salvar,
+  .cancelar {
+    font-size: 14px; /* Reduz o tamanho da fonte dos botões */
+    padding: 8px 15px; /* Reduz o padding dos botões */
+  }
+}

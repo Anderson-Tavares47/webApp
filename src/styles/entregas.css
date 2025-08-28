@@ -1,0 +1,494 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap");
+
+/* ✅ Container principal */
+.entregas-container {
+  width: 100%;
+  max-width: 1042px;
+  margin: 40px auto;
+  text-align: left;
+  padding: 0 10px;
+}
+
+/* ✅ Cabeçalho */
+.entregas-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.entregas-title {
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  font-size: 32px;
+  color: #3b447b;
+}
+
+/* ✅ Botão "Incluir Entrega" */
+.incluir-entrega {
+  background-color: #3b447b;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  width: 180px;
+  height: 38px;
+  padding: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.incluir-entrega:hover {
+  background-color: #2e365f;
+}
+
+/* ✅ Filtros */
+.filtros {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.periodo-opcoes {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.periodo-btn {
+  background: transparent;
+  border: 1px solid #3b447b;
+  color: #3b447b;
+  border-radius: 50px;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* ✅ Campo de pesquisa */
+.procurar {
+  width: 500px;
+  height: 35px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #d9d9d9;
+  opacity: 0.67;
+  padding: 11px;
+  font-size: 16px;
+  outline: none;
+  transition: border 0.3s ease-in-out;
+}
+
+.procurar::placeholder {
+  color: #676363;
+  font-weight: bold;
+  font-family: "Roboto Slab", serif;
+}
+
+.procurar:focus {
+  border: 1px solid #3b447b;
+}
+
+/* ✅ Botão "Por período" */
+.filtro-botao {
+  width: 148px;
+  height: 38px;
+  border-radius: 50px;
+  border: 1px solid;
+  border-image: linear-gradient(to right, #999999, #cccccc, #999999) -5;
+  background: transparent;
+  padding: 5px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #3b447b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  gap: 10px;
+}
+
+.filtro-botao:hover {
+  background: #3b447b;
+  color: white;
+}
+
+/* ✅ Status Filtros */
+.status-filtros {
+  display: flex;
+  gap: 15px;
+  font-size: 16px;
+  margin-bottom: 50px;
+}
+
+.status-filtros span {
+  width: 141px;
+  height: 26px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  font-size: 17px;
+  color: #999999;
+  cursor: pointer;
+  text-align: center;
+  transition: color 0.3s ease-in-out;
+}
+
+.status-filtros span.ativo {
+  color: #3b447b;
+}
+
+/* ✅ Linha separadora */
+.status-divider {
+  width: 100%;
+  height: 2px;
+  border: none;
+  background: linear-gradient(to right, #07aba0, #cccccc, #999999);
+  margin: 10px 0;
+}
+
+/* ✅ Tabela de Entregas */
+.tabela-entregas-container {
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #fff;
+  gap: 15px;
+}
+
+.tabela-entregas {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabela-entregas th {
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #676363;
+  text-align: left;
+  padding: 10px;
+  border-bottom: 2px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+.tabela-entregas tbody tr {
+  border-bottom: 1px solid #ccc;
+}
+
+.tabela-entregas tbody tr:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+.tabela-entregas td {
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #000000;
+  text-align: left;
+  padding: 10px;
+  position: relative; /* Permite posicionamento absoluto do SVG */
+  padding-right: 30px; /* Espaço para o ícone de ações */
+  border-bottom: 1px solid #ccc;
+}
+
+/* ✅ Checkbox */
+.tabela-entregas input[type="checkbox"] {
+  width: 21px;
+  height: 19px;
+  border-radius: 5px;
+  border: 2px solid #999999;
+  background-color: #ffffff;
+  cursor: pointer;
+  appearance: none;
+  display: inline-block;
+  position: relative;
+}
+
+.tabela-entregas input[type="checkbox"]:checked::after {
+  content: "✔";
+  font-size: 14px;
+  color: #3b447b;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.filtro-data {
+  position: relative;
+}
+
+.date-picker {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.acoes {
+  cursor: pointer;
+}
+
+/* ✅ Ícone de três pontinhos */
+/* Posiciona o SVG de ações à direita */
+.menu-acoes {
+  position: absolute;
+  right: 5px; /* Ajuste conforme necessário */
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  width: 20px; /* Ajuste o tamanho do ícone */
+  height: 20px;
+}
+
+.menu-acoes:hover {
+  opacity: 0.7;
+}
+
+/* ✅ Indicadores de status */
+.status-indicador {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-left: 5px;
+}
+
+.verde {
+  background-color: #07aba0;
+}
+
+.azul {
+  background-color: #3b447b;
+}
+
+.vermelho {
+  background-color: #e63946;
+}
+
+/* ✅ Paginação */
+.paginacao {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.paginacao span {
+  width: 21px;
+  height: 24px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #676363;
+  text-align: center;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.paginacao span:hover {
+  color: #3b447b;
+}
+
+/* 📲 Responsividade */
+@media (max-width: 1024px) {
+  .entregas-container {
+    max-width: 90%;
+    padding: 0 15px;
+  }
+
+  .entregas-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .entregas-title {
+    font-size: 28px;
+  }
+
+  .incluir-entrega {
+    width: 150px;
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .filtros {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .procurar {
+    width: 100%;
+  }
+
+  .filtro-botao {
+    width: 100%;
+  }
+
+  .status-filtros {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .tabela-entregas-container {
+    overflow-x: auto; /* Adiciona rolagem horizontal */
+    -webkit-overflow-scrolling: touch; /* Melhora a rolagem em dispositivos móveis */
+  }
+
+  .tabela-entregas {
+    min-width: 600px; /* Define uma largura mínima para a tabela */
+  }
+
+  .tabela-entregas th,
+  .tabela-entregas td {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .paginacao {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .entregas-container {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .entregas-title {
+    font-size: 24px;
+  }
+
+  .incluir-entrega {
+    width: 120px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .filtro-botao {
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .status-filtros span {
+    font-size: 16px;
+  }
+
+  .tabela-entregas th,
+  .tabela-entregas td {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .paginacao span {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .entregas-title {
+    font-size: 20px;
+  }
+
+  .incluir-entrega {
+    width: 100px;
+    height: 25px;
+    font-size: 10px;
+  }
+
+  .filtro-botao {
+    height: 25px;
+    font-size: 10px;
+  }
+
+  .status-filtros span {
+    font-size: 14px;
+  }
+
+  .tabela-entregas th,
+  .tabela-entregas td {
+    font-size: 10px;
+    padding: 4px;
+  }
+
+  .paginacao span {
+    font-size: 10px;
+  }
+}
+
+/* Fundo escurecido quando a modal estiver aberta */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Caixa da modal */
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+/* Botão de fechar */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Opções da modal */
+.modal-option {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Alinha ícone e texto */
+  gap: 8px;
+  height: 35px; /* Definido pela imagem */
+  font-family: "Roboto Slab", serif; /* Fonte */
+  font-size: 20px; /* Tamanho da fonte */
+  font-weight: 500; /* Peso da fonte */
+  line-height: 21.1px; /* Espaçamento entre linhas */
+  color: #000000; /* Cor do texto */
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 10px auto; /* Centraliza os botões verticalmente */
+}
+
+.modal-option:hover {
+  background: #f0f0f0;
+  border-radius: 5px;
+}

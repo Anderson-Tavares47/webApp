@@ -1,0 +1,506 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap");
+
+/* ✅ Container principal */
+.manutencao-container {
+  width: 100%;
+  max-width: 1042px;
+  margin: 40px auto;
+  text-align: left;
+  padding: 0 10px;
+}
+
+/* ✅ Estilização do cabeçalho */
+.manutencao-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.manutencao-title {
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  font-size: 32px;
+  color: #3b447b;
+}
+
+/* ✅ Botão "Incluir Manutenção" */
+.incluir-manutencao {
+  width: 204px;
+  height: 38px;
+  background-color: #3b447b;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.incluir-manutencao:hover {
+  background-color: #2e365f;
+  transform: scale(1.05);
+}
+
+/* ✅ Filtros */
+.filtros {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* ✅ Campo de busca por placa */
+.input-busca-placa {
+  width: 500px;
+  height: 30px;
+  border-radius: 5px;
+  padding: 11px;
+  background-color: #d9d9d9;
+  opacity: 0.67;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+}
+
+/* ✅ Placeholder do campo de busca */
+.input-busca-placa::placeholder {
+  color: #676767;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* ✅ Input de busca */
+.procurar {
+  width: 300px;
+  height: 38px;
+  border-radius: 50px;
+  border: 1px solid;
+  border-image: linear-gradient(to right, #999999, #cccccc, #999999) -5;
+  padding: 5px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #3b447b;
+  text-align: left;
+}
+
+.procurar::placeholder {
+  color: #999999;
+}
+
+/* ✅ Botão "Por Período" */
+.filtro-botao {
+  width: 148px;
+  height: 38px;
+  border-radius: 50px;
+  border: 1px solid;
+  border-image: linear-gradient(to right, #999999, #cccccc, #999999) -5;
+  background: transparent;
+  padding: 5px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #3b447b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  gap: 10px;
+  text-align: center;
+}
+
+.periodo-opcoes {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.periodo-btn {
+  background: transparent;
+  border: 1px solid #3b447b;
+  color: #3b447b;
+  border-radius: 50px;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.filtro-botao:hover {
+  background: #3b447b;
+  color: white;
+}
+
+/* ✅ Tabs de status */
+.status-filtros {
+  display: flex;
+  gap: 50px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+
+.status-filtros span {
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #999999;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.status-filtros span.ativo {
+  color: #3b447b;
+}
+
+/* ✅ Linha separadora abaixo dos filtros */
+.status-divider {
+  width: 100%;
+  height: 2px;
+  border: none;
+  background: linear-gradient(to right, #07aba0, #cccccc, #999999);
+  margin: 10px 0;
+}
+
+/* ✅ Tabela de Manutenção */
+.tabela-manutencao-container {
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #fff;
+  gap: 15px;
+}
+
+.tabela-manutencao {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.tabela-manutencao th {
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #676363;
+  text-align: -webkit-center;
+  padding: 10px;
+  border-bottom: 2px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+.tabela-manutencao tbody tr {
+  border-bottom: 1px solid #ccc;
+}
+
+.tabela-manutencao tbody tr:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+.tabela-manutencao td {
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #000000;
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.acoes {
+  cursor: pointer;
+}
+
+/* ✅ Ícone de três pontinhos */
+.menu-acoes {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.menu-acoes:hover {
+  opacity: 0.7;
+}
+
+/* ✅ Indicador de Status */
+.status-indicador {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.status-indicador.verde {
+  background-color: #07aba0;
+}
+
+.status-indicador.azul {
+  background-color: #3b447b;
+}
+
+.status-indicador.vermelho {
+  background-color: #cc0000;
+}
+
+/* ✅ Paginação */
+.paginacao {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 15px;
+}
+
+/* ✅ Estilização das checkboxes */
+.tabela-manutencao input[type="checkbox"] {
+  width: 21px;
+  height: 19px;
+  border: 2px solid #999999;
+  border-radius: 5px;
+  background-color: #ffffff;
+  cursor: pointer;
+  appearance: none;
+  display: inline-block;
+  position: relative;
+}
+
+/* ✅ Efeito quando marcada */
+.tabela-manutencao input[type="checkbox"]:checked {
+  background-color: #3b447b;
+  border-color: #3b447b;
+}
+
+/* ✅ Ícone de check ao ser marcada */
+.tabela-manutencao input[type="checkbox"]::before {
+  content: "✔";
+  font-size: 14px;
+  color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+/* ✅ Exibir o ícone quando estiver marcada */
+.tabela-manutencao input[type="checkbox"]:checked::before {
+  display: block;
+}
+
+.paginacao span {
+  width: 21px;
+  height: 24px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23.74px;
+  color: #676363;
+  text-align: center;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.paginacao span:hover {
+  color: #3b447b;
+}
+
+/* 📲 Responsividade */
+@media (max-width: 1024px) {
+  .manutencao-container {
+    max-width: 90%;
+    padding: 0 15px;
+  }
+
+  .manutencao-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .manutencao-title {
+    font-size: 28px;
+  }
+
+  .incluir-manutencao {
+    width: 150px;
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .filtros {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .input-busca-placa {
+    width: 100%;
+  }
+
+  .filtro-botao {
+    width: 100%;
+  }
+
+  .status-filtros {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .tabela-manutencao-container {
+    overflow-x: auto; /* Adiciona rolagem horizontal */
+    -webkit-overflow-scrolling: touch; /* Melhora a rolagem em dispositivos móveis */
+  }
+
+  .tabela-manutencao {
+    min-width: 600px; /* Define uma largura mínima para a tabela */
+  }
+
+  .tabela-manutencao th,
+  .tabela-manutencao td {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .paginacao {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .manutencao-container {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .manutencao-title {
+    font-size: 24px;
+  }
+
+  .incluir-manutencao {
+    width: 120px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .filtro-botao {
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .status-filtros span {
+    font-size: 16px;
+  }
+
+  .tabela-manutencao th,
+  .tabela-manutencao td {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .paginacao span {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .manutencao-title {
+    font-size: 20px;
+  }
+
+  .incluir-manutencao {
+    width: 100px;
+    height: 25px;
+    font-size: 10px;
+  }
+
+  .filtro-botao {
+    height: 25px;
+    font-size: 10px;
+  }
+
+  .status-filtros span {
+    font-size: 14px;
+  }
+
+  .tabela-manutencao th,
+  .tabela-manutencao td {
+    font-size: 10px;
+    padding: 4px;
+  }
+
+  .paginacao span {
+    font-size: 10px;
+  }
+}
+
+/* Fundo escurecido quando a modal estiver aberta */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Caixa da modal */
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+/* Botão de fechar */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Opções da modal */
+.modal-option {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Alinha ícone e texto */
+  gap: 8px;
+  height: 35px; /* Definido pela imagem */
+  font-family: "Roboto Slab", serif; /* Fonte */
+  font-size: 20px; /* Tamanho da fonte */
+  font-weight: 500; /* Peso da fonte */
+  line-height: 21.1px; /* Espaçamento entre linhas */
+  color: #000000; /* Cor do texto */
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 10px auto; /* Centraliza os botões verticalmente */
+}
+
+.modal-option:hover {
+  background: #f0f0f0;
+  border-radius: 5px;
+}

@@ -1,0 +1,712 @@
+/* ✅ Container principal */
+.novo-produto-container {
+  width: 100%;
+  max-width: 1042px;
+  margin: 40px auto;
+  text-align: left;
+  padding: 0 10px;
+}
+
+/* ✅ Cabeçalho */
+.novo-produto-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* ✅ Título */
+.novo-produto-title {
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 42.2px;
+  color: #3b447b;
+}
+
+/* ✅ Botão "Voltar" */
+.back-button {
+  background-color: #3b447b;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 8px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.back-button:hover {
+  background-color: #2e365f;
+}
+
+/* ✅ Tabs */
+.tabs {
+  display: flex;
+  gap: 30px;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.tab {
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26.38px;
+  color: #676363;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.tab.active {
+  color: #3b447b;
+  font-weight: bold;
+}
+
+/* ✅ Linha abaixo das tabs */
+.tabs-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, #07aba0, #cccccc, #999999);
+  margin-bottom: 15px;
+}
+
+/* ✅ Formulário */
+.dados-gerais-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* ✅ Organiza os inputs corretamente */
+.form-row {
+  display: flex;
+  justify-content: end;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+}
+
+.form-row2 {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+}
+
+/* ✅ Estilização dos campos */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23.74px;
+  color: #676363;
+  margin-bottom: 5px;
+  margin-top: 20px;
+}
+
+/* ✅ Estilização padrão dos inputs e selects */
+.form-group select {
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+}
+
+input[name="codigo"] {
+  width: 80px;
+}
+
+.form-group input::placeholder,
+.form-group select::placeholder {
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #676363;
+  opacity: 0.5;
+}
+
+/* ✅ Seções adicionais */
+/* ✅ Estilização da Section Title */
+.section-title {
+  font-family: "Roboto Slab", serif; /* ✅ Fonte correta */
+  font-weight: 700; /* ✅ Peso da fonte */
+  font-size: 24px; /* ✅ Tamanho da fonte */
+  line-height: 31.65px; /* ✅ Altura da linha */
+  color: #3b447b; /* ✅ Cor exata */
+  height: 32px; /* ✅ Altura exata */
+  margin-bottom: 10px;
+}
+
+.tabs-dividerDisperdicio {
+  background: linear-gradient(to right, #07aba0, #cccccc, #999999);
+  margin-top: 100px;
+  height: 1px;
+}
+
+.section-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, #07aba0, #cccccc, #999999);
+  margin: 15px 0;
+}
+
+/* ✅ Inputs com unidade (Kg, cm, un) */
+.input-group {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.input-group .unit {
+  position: absolute;
+  right: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #999999;
+  background: #d9d9d9;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* ✅ Imagem centralizada à direita */
+.dimensoes-imagem {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: -60px; /* Ajuste conforme necessário */
+  padding-left: 35px;
+}
+
+/* ✅ Botões */
+.form-actions {
+  display: flex;
+  gap: 15px;
+}
+
+/* ✅ Botão "Salvar" */
+.salvar-btn {
+  width: 140px; /* ✅ Largura fixa */
+  height: 38px; /* ✅ Altura fixa */
+  background-color: #3b447b; /* ✅ Cor exata */
+  color: white;
+  border: none;
+  border-radius: 50px; /* ✅ Borda arredondada */
+  padding: 5px; /* ✅ Espaçamento interno */
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* ✅ Espaço entre o ícone e o texto */
+  transition: background 0.3s ease-in-out;
+}
+
+.salvar-btn:hover {
+  background-color: #2e365f; /* ✅ Efeito ao passar o mouse */
+}
+
+/* 📲 Responsividade */
+@media (max-width: 768px) {
+  .salvar-btn {
+    width: 100%; /* ✅ Ocupa a largura total em telas menores */
+  }
+}
+
+/* ✅ Ajuste para aumentar o tamanho do input "Descrição" */
+.form-group.descricao {
+  flex: 2; /* ✅ Aumenta o espaço ocupado pelo campo */
+}
+.cancelar-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: #3b447b;
+  cursor: pointer;
+}
+
+/* ✅ Ajuste ao passar o mouse */
+.salvar-btn:hover {
+  background-color: #2e365f;
+}
+
+.cancelar-btn:hover {
+  color: #2e365f;
+}
+
+/* 📲 Responsividade */
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .form-group input,
+  .form-group select {
+    width: 100%;
+  }
+
+  .input-group {
+    width: 100%;
+  }
+
+  .input-group input {
+    width: calc(100% - 50px);
+  }
+
+  .input-group .unit {
+    right: 5px;
+  }
+
+  .salvar-btn,
+  .cancelar-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/*          */
+/*          */
+/* PRODUÇÃO */
+/*          */
+/*          */
+/* ✅ Estilização da tabela de produtos */
+.tabela-produtos-container {
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #fff;
+  gap: 15px;
+}
+
+.tabela-produtos {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabela-produtos th,
+.tabela-produtos td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+/* ✅ Estilização dos cabeçalhos (th) */
+.tabela-produtos th {
+  background-color: #f9f9f9;
+  font-family: "Roboto Slab", serif;
+  font-weight: 400; /* ✅ Peso da fonte */
+  font-size: 18px; /* ✅ Tamanho da fonte */
+  line-height: 23.74px; /* ✅ Altura da linha */
+  color: #676363; /* ✅ Cor conforme a imagem */
+  text-transform: none; /* ✅ Mantém o texto normal */
+  padding: 8px 12px; /* ✅ Ajuste de espaçamento interno */
+}
+
+/* ✅ Inputs dentro da tabela */
+.tabela-produtos input {
+  height: 35px;
+  border: 1px solid transparent;
+  border-image: linear-gradient(to right, #999999, #cccccc, #999999) 1;
+  background: #ffffff;
+  font-size: 16px;
+  padding: 5px;
+  border-radius: 5px;
+  outline: none;
+}
+
+.input-produto {
+  width: 500px;
+}
+
+.input-unidade,
+.input-quantidade {
+  width: 80px;
+}
+
+.input-group.input-custo {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.input-group.input-custo .prefix {
+  font-weight: bold;
+  color: #999999;
+  margin-right: 5px;
+}
+
+.input-total {
+  width: 80px;
+  background: #f2f2f2;
+  color: #999;
+  pointer-events: none;
+}
+
+/* ✅ Botão "Salvar" na tabela */
+.save-btn {
+  width: 70px;
+  height: 30px;
+  background-color: #3b447b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.save-btn:hover {
+  background-color: #2e365f;
+}
+
+/* ✅ Container para alinhar os botões "Salvar" e "Excluir" lado a lado */
+.botoes-acoes {
+  display: flex;
+  gap: 10px; /* Espaçamento entre os botões */
+}
+
+/* ✅ Botão "Excluir" (estilização igual ao "Salvar", mas vermelho) */
+.delete-btn {
+  background-color: #d9534f; /* ✅ Cor vermelha para deletar */
+  color: white;
+  width: 70px; /* ✅ Mesmo tamanho do "Salvar" */
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+/* ✅ Efeito hover para o botão "Excluir" */
+.delete-btn:hover {
+  background-color: #c9302c; /* ✅ Tom mais escuro ao passar o mouse */
+}
+
+/* ✅ Linha Totais */
+.totais-label {
+  font-weight: bold;
+  font-size: 16px;
+  color: #3b447b;
+}
+
+/* ✅ Botões abaixo da tabela */
+/* ✅ Botões abaixo da tabela */
+.estrutura-actions {
+  display: flex;
+  gap: 30px; /* ✅ Ajusta o espaçamento entre os botões */
+  margin-top: 15px;
+}
+
+/* ✅ Estilização específica para os botões */
+.add-item-btn,
+.update-cost-btn {
+  background: none;
+  border: none;
+  font-family: "Roboto Slab", serif; /* ✅ Fonte correta */
+  font-weight: 700; /* ✅ Peso da fonte */
+  font-size: 16px; /* ✅ Tamanho da fonte */
+  line-height: 21.1px; /* ✅ Altura da linha */
+  color: #07aba0; /* ✅ Cor exata */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none; /* ✅ Remove sublinhado */
+  transition: color 0.3s ease-in-out;
+}
+
+/* ✅ Efeito ao passar o mouse */
+.add-item-btn:hover,
+.update-cost-btn:hover {
+  color: #056b68;
+}
+
+/* 📲 Responsividade */
+@media (max-width: 1024px) {
+  .novo-produto-container {
+    max-width: 90%;
+    padding: 0 15px;
+  }
+
+  .novo-produto-title {
+    font-size: 28px;
+  }
+
+  .tabs {
+    gap: 15px;
+  }
+
+  .tab {
+    font-size: 18px;
+  }
+
+  .form-row,
+  .form-row2 {
+    gap: 15px;
+  }
+
+  .form-group input,
+  .form-group select {
+    width: 100%;
+  }
+
+  .input-group input {
+    width: calc(100% - 50px);
+  }
+
+  .input-group .unit {
+    right: 5px;
+  }
+
+  .tabela-produtos-container {
+    overflow-x: auto; /* Adiciona rolagem horizontal */
+    -webkit-overflow-scrolling: touch; /* Melhora a rolagem em dispositivos móveis */
+  }
+
+  .tabela-produtos {
+    min-width: 600px; /* Define uma largura mínima para a tabela */
+  }
+
+  .input-produto {
+    width: 100%;
+  }
+
+  .input-unidade,
+  .input-quantidade {
+    width: 70px;
+  }
+
+  .input-group.input-custo {
+    width: 80px;
+  }
+
+  .input-total {
+    width: 70px;
+  }
+
+  .save-btn,
+  .delete-btn {
+    width: 60px;
+    font-size: 12px;
+  }
+
+  .estrutura-actions {
+    gap: 15px;
+  }
+
+  .add-item-btn,
+  .update-cost-btn {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .novo-produto-container {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .novo-produto-title {
+    font-size: 24px;
+  }
+
+  .tabs {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .tab {
+    font-size: 16px;
+  }
+
+  .form-row,
+  .form-row2 {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .form-group input,
+  .form-group select {
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .input-group input {
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .input-group .unit {
+    font-size: 14px;
+  }
+
+  .tabela-produtos th,
+  .tabela-produtos td {
+    font-size: 14px;
+    padding: 6px 8px;
+  }
+
+  .input-produto {
+    width: 100%;
+  }
+
+  .input-unidade,
+  .input-quantidade {
+    width: 60px;
+  }
+
+  .input-group.input-custo {
+    width: 70px;
+  }
+
+  .input-total {
+    width: 60px;
+  }
+
+  .save-btn,
+  .delete-btn {
+    width: 50px;
+    font-size: 10px;
+  }
+
+  .estrutura-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .add-item-btn,
+  .update-cost-btn {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .novo-produto-title {
+    font-size: 20px;
+  }
+
+  .tab {
+    font-size: 14px;
+  }
+
+  .form-group input,
+  .form-group select {
+    height: 25px;
+    font-size: 12px;
+  }
+
+  .input-group input {
+    height: 25px;
+    font-size: 12px;
+  }
+
+  .input-group .unit {
+    font-size: 12px;
+  }
+
+  .tabela-produtos th,
+  .tabela-produtos td {
+    font-size: 12px;
+    padding: 4px 6px;
+  }
+
+  .input-produto {
+    width: 100%;
+  }
+
+  .input-unidade,
+  .input-quantidade {
+    width: 50px;
+  }
+
+  .input-group.input-custo {
+    width: 60px;
+  }
+
+  .input-total {
+    width: 50px;
+  }
+
+  .save-btn,
+  .delete-btn {
+    width: 40px;
+    font-size: 8px;
+  }
+
+  .add-item-btn,
+  .update-cost-btn {
+    font-size: 10px;
+  }
+}
+
+/* ✅ Índice de Desperdício */
+.indice-desperdicio {
+  margin-top: 75px;
+}
+
+select[name="porcentagem"] {
+  margin-top: 50px;
+}
+
+/* ✅ Estilização do campo de porcentagem */
+.form-group.porcentagem {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+}
+
+/* ✅ Estilização do input com unidade (%) */
+
+.form-group.porcentagem .unit {
+  position: absolute;
+  right: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #999999;
+  background: #d9d9d9;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.input-error {
+  border: 1px solid red !important;
+  background-color: #ffe6e6;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+}

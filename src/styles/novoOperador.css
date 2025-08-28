@@ -1,0 +1,809 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap");
+
+/* Estilização principal */
+.novo-operador-container {
+  width: 100%;
+  max-width: 1042px;
+  margin: 40px auto;
+  text-align: left;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+/* Corrige o problema da tela desaparecendo ao trocar de aba */
+.aba-conteudo {
+  min-height: 600px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.aba-conteudo.ativa {
+  opacity: 1;
+  visibility: visible;
+}
+
+.novo-operador-content {
+  min-height: 500px;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.sidebar-open .novo-operador-container {
+  margin-left: 250px;
+}
+
+/* Estilização do cabeçalho */
+.novo-operador-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.novo-operador-header h1,
+.dados-acesso-title {
+  font-size: clamp(22px, 3vw, 37px);
+  font-weight: bold;
+  color: #3b447b;
+  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
+}
+
+/* Botão de voltar */
+.back-button {
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  font-size: clamp(14px, 2vw, 16px);
+  color: white;
+  background: #3b447b;
+  width: 140px;
+  height: 35px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease-in-out;
+}
+
+.back-button:hover {
+  background: #2e376b;
+}
+
+.back-button-wrapper {
+  position: relative;
+  top: 20px;
+  right: -125px;
+  z-index: 10; /* Garante que fique acima de outros elementos */
+}
+
+/* Estilização das abas */
+.tabs {
+  display: flex;
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  width: 112%;
+}
+
+/* .backButtonOperador {
+  padding-left: 84%;
+} */
+
+.hrButtons4 {
+  width: 115%;
+  height: 2px;
+  background: linear-gradient(to right, #07aba0, #ccc, #999);
+  margin-top: 5px;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 0;
+}
+
+.tabs span {
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.tabs .active,
+.comissao {
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  font-size: clamp(16px, 2vw, 20px);
+  line-height: 26.38px;
+  color: #3b447b;
+}
+
+.tabs .inactive {
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  font-size: clamp(14px, 2vw, 20px);
+  line-height: 26.38px;
+  color: #676767;
+  padding: 10px 20px;
+  border-radius: 10px 10px 0 0;
+  cursor: pointer;
+}
+
+/* Estilização do formulário */
+.novo-operador-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  align-items: center;
+}
+
+.form-row.three-cols {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* Grupos de input */
+.form-group {
+  /* flex: 1; */
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #676363;
+  margin-bottom: 5px;
+}
+
+.form-group select {
+  width: 100%;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+}
+
+input[name="codigo"] {
+  width: 40%;
+}
+
+select[name="tipo"],
+select[name="situacao"] {
+  width: 50%;
+  padding: 8px;
+}
+
+input[name="celular"] {
+  width: 60%;
+}
+
+/* input[name="email"],
+input[name="nome"] {
+  width: 110%;
+} */
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #07aba0;
+}
+
+/* Estilização dos placeholders */
+.form-group input::placeholder {
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #999999;
+  opacity: 1;
+}
+
+/* Botão salvar */
+.save-btn {
+  background-color: #3b447b;
+  color: white;
+  width: 140px;
+  height: 38px;
+  padding: 5px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+  gap: 10px;
+}
+
+.save-btn:hover {
+  background-color: #2e365f;
+  transform: scale(1.05);
+}
+
+/* Botão cancelar */
+.cancel-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #3b447b;
+  font-family: "Roboto Slab", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26.38px;
+  text-decoration: none;
+  transition: 0.3s ease, transform 0.2s ease-in-out;
+}
+
+.cancel-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Força os inputs Usuário do Sistema e Senha do Sistema a ficarem um abaixo do outro */
+.form-column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 10%;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.hrButtons {
+  width: 115%;
+  height: 2px;
+  background: linear-gradient(to right, #07aba0, #ccc, #999);
+  margin-top: 5px;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 0;
+}
+
+.hrButtons2 {
+  width: 115%;
+  height: 2px;
+  background: linear-gradient(to right, #07aba0, #ccc, #999);
+  margin-top: 5px;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 0;
+  margin-top: 200px;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .novo-operador-container {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .form-row.three-cols {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .novo-operador-container {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .tabs {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tabs span {
+    width: 100%;
+  }
+
+  .novo-operador-header h1 {
+    font-size: 28px;
+  }
+
+  .form-group input,
+  .form-group select {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .novo-operador-header h1 {
+    font-size: 22px;
+  }
+
+  .back-button {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  .save-btn,
+  .cancel-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+/* COMISSÃO */
+/* COMISSAO */
+/* // Comissao /// */
+/* COMISSAO */
+.tabela-produtos-container {
+  margin-top: 20px;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #fff;
+  gap: 15px;
+}
+.section-title {
+  color: #3b447b;
+  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
+}
+
+.input-unidade {
+  width: 80px;
+  height: 35px;
+  border: 1px solid #999999;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .input-unidade {
+    width: 70px;
+    height: 45px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .input-unidade {
+    width: 60px;
+    height: 40px;
+    font-size: 12px;
+  }
+}
+
+.input-quantidade {
+  width: 80px;
+  height: 35px;
+  border: 1px solid #999999;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .input-quantidade {
+    width: 70px;
+    height: 45px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .input-quantidade {
+    width: 60px;
+    height: 40px;
+    font-size: 12px;
+  }
+}
+
+.input-valor {
+  width: 80px;
+  height: 35px;
+  border: 1px solid #999999;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .input-valor {
+    width: 70px;
+    height: 45px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .input-valor {
+    width: 60px;
+    height: 40px;
+    font-size: 12px;
+  }
+}
+
+/* Estilização da Seção de Regras para Liberação de Comissões */
+.regra-comissao-container {
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 600px;
+}
+
+.regra-comissao-container label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #676363;
+  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
+}
+
+.select-comissao {
+  width: 365px; /* Definido conforme a imagem */
+  height: 50px; /* Ajustado conforme a altura da imagem */
+  font-family: "Roboto Slab", serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #676363;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  outline: none;
+  padding: 4px 8px; /* Espaçamento interno nos 4 lados */
+}
+
+.select-comissao:focus {
+  border-color: #3b447b;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .regra-comissao-container {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .select-comissao {
+    height: 42px; /* Ajuste mais suave */
+    font-size: 16px;
+    padding: 5px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .regra-comissao-container {
+    padding: 8px;
+  }
+
+  .select-comissao {
+    height: 38px; /* Mantém um tamanho confortável para toque */
+    font-size: 14px;
+    padding: 4px 6px;
+    border-radius: 3px;
+  }
+}
+
+@media (max-width: 360px) {
+  .select-comissao {
+    height: 35px;
+    font-size: 13px;
+    padding: 3px 5px;
+  }
+}
+
+.input-produto {
+  height: 35px;
+  border: 1px s;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 4px;
+  width: 500px;
+}
+
+@media (max-width: 768px) {
+  .input-produto {
+    width: 100%;
+    height: 45px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .input-produto {
+    height: 40px;
+    font-size: 12px;
+  }
+}
+
+.total {
+  width: 53px;
+  height: 24px;
+  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
+  color: #676363;
+  margin: 10px;
+}
+
+.tabela-produtos {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabela-produtos td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+  padding: 15px;
+}
+
+.tabela-produtos th {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+  padding: 15px;
+}
+
+.tabela-produtos th {
+  color: #676363;
+  font-weight: bold;
+}
+
+.tabela-produtos td input {
+  padding: 2px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.acoes {
+  text-align: center;
+  display: flex;
+  gap: 10px;
+}
+
+.botoes-acoes {
+  display: flex;
+  gap: 10px; /* Espaçamento entre os botões */
+}
+
+/* Estilização do botão de exclusão, igual ao botão de salvar */
+.deletar-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d9534f; /* Cor vermelha para deletar */
+  color: white;
+  width: 100px;
+  height: 40px;
+  padding: 6px 10px;
+  border-radius: 30px;
+  cursor: pointer;
+  border: none;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background 0.3s;
+  gap: 10px;
+}
+
+.deletar-btn:hover {
+  background-color: #c9302c; /* Tom mais escuro no hover */
+}
+
+.salvar-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3b447b;
+  color: white;
+  width: 100px;
+  height: 40px;
+  padding: 6px 10px;
+  border-radius: 30px;
+  cursor: pointer;
+  border: none;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.salvar-btn:hover {
+  background-color: #2e376b;
+}
+
+.add-item-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #07aba0;
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.add-item-btn:hover {
+  color: #055e57;
+}
+/* Responsividade */
+@media (max-width: 1024px) {
+  .novo-operador-container {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .form-row.three-cols {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .select-comissao {
+    width: 100%;
+  }
+
+  .input-produto {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .novo-operador-container {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .tabs {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tabs span {
+    width: 100%;
+  }
+
+  .novo-operador-header h1 {
+    font-size: 28px;
+  }
+
+  .form-group input,
+  .form-group select {
+    width: 100%;
+  }
+
+  .input-unidade,
+  .input-quantidade,
+  .input-valor {
+    width: 70px;
+    height: 45px;
+    font-size: 14px;
+  }
+
+  .tabela-produtos th,
+  .tabela-produtos td {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .tabela-produtos td input {
+    padding: 4px;
+    font-size: 14px;
+  }
+
+  .save-btn {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  .add-item-btn {
+    font-size: 14px;
+  }
+
+  .regra-comissao-container {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .select-comissao {
+    height: 42px;
+    font-size: 16px;
+    padding: 5px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .novo-operador-header h1 {
+    font-size: 22px;
+  }
+
+  .back-button {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  .save-btn,
+  .cancel-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .input-unidade,
+  .input-quantidade,
+  .input-valor {
+    width: 60px;
+    height: 40px;
+    font-size: 12px;
+  }
+
+  .tabela-produtos-container {
+    padding: 10px;
+  }
+
+  .tabela-produtos th,
+  .tabela-produtos td {
+    padding: 6px;
+    font-size: 12px;
+  }
+
+  .tabela-produtos td input {
+    padding: 3px;
+    font-size: 12px;
+  }
+
+  .save-btn {
+    font-size: 10px;
+    padding: 3px 6px;
+  }
+
+  .add-item-btn {
+    font-size: 12px;
+  }
+
+  .regra-comissao-container {
+    padding: 8px;
+  }
+
+  .select-comissao {
+    height: 38px;
+    font-size: 14px;
+    padding: 4px 6px;
+    border-radius: 3px;
+  }
+}
+
+@media (max-width: 360px) {
+  .select-comissao {
+    height: 35px;
+    font-size: 13px;
+    padding: 3px 5px;
+  }
+}

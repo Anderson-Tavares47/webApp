@@ -1,0 +1,555 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap");
+
+/* ✅ Container principal */
+.lista-producao-container {
+  width: 100%;
+  max-width: 1042px;
+  margin: 40px auto;
+  text-align: left;
+  padding: 0 10px;
+}
+
+/* ✅ Estilização do cabeçalho */
+.lista-producao-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.lista-producao-title {
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  font-size: 32px;
+  color: #3b447b;
+}
+
+/* ✅ Botão "Imprimir" */
+.print-button {
+  background-color: #3b447b;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  width: 172px;
+  height: 38px;
+  padding: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.print-button:hover {
+  background-color: #2e365f;
+}
+
+/* ✅ Filtros */
+.filtros {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* ✅ Campo de busca - Pesquisar por máquina ou código */
+.procurar {
+  width: 500px;
+  height: 35px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #d9d9d9;
+  opacity: 0.67;
+  padding: 11px;
+  font-size: 16px;
+  outline: none;
+  transition: border 0.3s ease-in-out;
+}
+
+.procurar::placeholder {
+  color: #676363;
+  font-weight: bold;
+  font-family: "Roboto Slab", serif;
+}
+
+.procurar:focus {
+  border: 1px solid #3b447b;
+}
+
+/* 📲 Responsividade */
+@media (max-width: 768px) {
+  .procurar {
+    width: 100%;
+    font-size: 14px;
+  }
+}
+
+.periodo-button {
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  font-size: 16px;
+  border: 1px solid;
+  color: #3b447b;
+  border-radius: 50px;
+  background: transparent;
+  cursor: pointer;
+  appearance: none;
+  text-align: center;
+}
+
+/* ✅ Efeito hover */
+.periodo-button:hover {
+  background: #3b447b;
+  color: white;
+}
+
+/* Chrome, Safari, Edge */
+.periodo-button::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  display: none;
+}
+
+/* Firefox */
+.periodo-button::-moz-focus-inner {
+  border: 0;
+}
+
+/* ✅ Linha separadora abaixo do status filter */
+.status-divider {
+  width: 1260px;
+  height: 2px;
+  border: none;
+  background: linear-gradient(to right, #07aba0, #cccccc, #999999);
+  margin: 10px 0;
+}
+
+/* ✅ Status filtros */
+.status-filtros {
+  display: flex;
+  gap: 15px;
+  font-size: 16px;
+  margin-bottom: 50px;
+}
+
+.btn-producao {
+  display: flex;
+  gap: 10px;
+  padding-left: 725px;
+}
+
+.btn-detalhes {
+  background-color: #3b447b;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  height: 38px;
+  padding: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 200px;
+}
+
+.btn-detalhes:hover {
+  background-color: #2e365f;
+}
+
+.acoes {
+  cursor: pointer;
+}
+
+/* ✅ Estilização dos status individuais */
+.status-filtros span {
+  width: 141px;
+  height: 26px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 26.38px;
+  color: #999999;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  transition: color 0.3s ease-in-out;
+}
+
+/* ✅ Cores específicas para cada status */
+.status-todos {
+  color: #6b6b6b;
+}
+
+.status-andamento {
+  color: #6b6b6b;
+}
+
+.status-aberto {
+  color: #e63946;
+}
+
+.status-finalizada {
+  color: #07aba0;
+}
+
+/* ✅ Cor para o status ativo */
+.status-filtros span.ativo {
+  color: #3b447b;
+}
+
+/* ✅ Tabela */
+.tabela-produtos-container {
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #fff;
+  gap: 15px;
+}
+
+.tabela-produtos {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ✅ Cabeçalho da tabela */
+/* ✅ Estilização dos cabeçalhos (th) */
+.tabela-produtos th {
+  width: 76px;
+  height: 24px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23.74px;
+  color: #676363;
+  text-align: left;
+  padding: 10px;
+  border-bottom: 2px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+/* ✅ Linhas da tabela */
+.tabela-produtos tbody tr {
+  border-bottom: 1px solid #ccc;
+}
+
+.tabela-produtos tbody tr:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+.col-nameProducao {
+  cursor: pointer;
+}
+
+.periodo-opcoes {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.periodo-btn {
+  background: transparent;
+  border: 1px solid #3b447b;
+  color: #3b447b;
+  border-radius: 50px;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* ✅ Estilização das células da tabela (td) */
+.tabela-produtos td {
+  width: 90px;
+  height: 24px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23.74px;
+  color: #000000;
+  text-align: left;
+  padding: 10px;
+}
+
+/* ✅ Checkbox */
+/* ✅ Checkbox estilizada */
+/* ✅ Checkbox estilizada */
+.tabela-produtos input[type="checkbox"] {
+  width: 21px;
+  height: 19px;
+  border-radius: 5px;
+  border: 2px solid #999999;
+  background-color: #ffffff;
+  cursor: pointer;
+  appearance: none;
+  display: inline-block;
+  position: relative;
+}
+
+/* ✅ Adicionando um check visual quando marcado */
+.tabela-produtos input[type="checkbox"]:checked::after {
+  content: "✔";
+  font-size: 14px;
+  color: #3b447b;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ✅ Estilização da paginação */
+.paginacao {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.paginacao span {
+  width: 21px;
+  height: 24px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23.74px;
+  color: #676363;
+  text-align: center;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+/* ✅ Efeito ao passar o mouse */
+.paginacao span:hover {
+  color: #3b447b;
+}
+
+/* 📲 Responsividade */
+@media (max-width: 768px) {
+  .tabela-produtos input[type="checkbox"] {
+    width: 18px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tabela-produtos input[type="checkbox"] {
+    width: 16px;
+    height: 14px;
+  }
+}
+
+/* 📲 Responsividade */
+@media (max-width: 1024px) {
+  .lista-producao-container {
+    max-width: 90%;
+    padding: 0 15px;
+  }
+
+  .lista-producao-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .lista-producao-title {
+    font-size: 28px;
+  }
+
+  .print-button {
+    width: 150px;
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .filtros {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .procurar {
+    width: 100%;
+  }
+
+  .periodo-button {
+    width: 100%;
+  }
+
+  .status-filtros {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .tabela-produtos-container {
+    overflow-x: auto; /* Adiciona rolagem horizontal */
+    -webkit-overflow-scrolling: touch; /* Melhora a rolagem em dispositivos móveis */
+  }
+
+  .tabela-produtos {
+    min-width: 600px; /* Define uma largura mínima para a tabela */
+  }
+
+  .tabela-produtos th,
+  .tabela-produtos td {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .paginacao {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .lista-producao-container {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .lista-producao-title {
+    font-size: 24px;
+  }
+
+  .print-button {
+    width: 120px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .procurar {
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .periodo-button {
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .status-filtros span {
+    font-size: 16px;
+  }
+
+  .tabela-produtos th,
+  .tabela-produtos td {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .paginacao span {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .lista-producao-title {
+    font-size: 20px;
+  }
+
+  .print-button {
+    width: 100px;
+    height: 25px;
+    font-size: 10px;
+  }
+
+  .procurar {
+    height: 25px;
+    font-size: 12px;
+  }
+
+  .periodo-button {
+    height: 25px;
+    font-size: 10px;
+  }
+
+  .status-filtros span {
+    font-size: 14px;
+  }
+
+  .tabela-produtos th,
+  .tabela-produtos td {
+    font-size: 10px;
+    padding: 4px;
+  }
+
+  .paginacao span {
+    font-size: 10px;
+  }
+}
+
+/* Fundo escurecido quando a modal estiver aberta */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Caixa da modal */
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+/* Botão de fechar */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Opções da modal */
+.modal-option {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Alinha ícone e texto */
+  gap: 8px;
+  height: 35px; /* Definido pela imagem */
+  font-family: "Roboto Slab", serif; /* Fonte */
+  font-size: 20px; /* Tamanho da fonte */
+  font-weight: 500; /* Peso da fonte */
+  line-height: 21.1px; /* Espaçamento entre linhas */
+  color: #000000; /* Cor do texto */
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 10px auto; /* Centraliza os botões verticalmente */
+}
+
+.modal-option:hover {
+  background: #f0f0f0;
+  border-radius: 5px;
+}
+
+.motorista-titulo {
+  display: flex;
+  align-items: center; /* 🔹 Alinha a imagem com o texto */
+  gap: 8px; /* 🔹 Espaço entre a imagem e o texto */
+  justify-content: center;
+}

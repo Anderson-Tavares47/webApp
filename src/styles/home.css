@@ -1,0 +1,442 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap");
+
+/* ===================== */
+/*  LAYOUT PRINCIPAL DA HOME */
+/* ===================== */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh; /* Garante que ocupe toda a altura da tela */
+  height: 100vh;
+  /* background-color: #f3f4f6; */
+  transition: margin-left 0.3s ease;
+  margin-left: 0;
+  width: 100%; /* Evita cortes de fundo */
+}
+
+.home-container.sidebar-open {
+  margin-left: min(260px, 25vw);
+}
+
+/* ===================== */
+/*  MODAL RESPONSIVA */
+/* ===================== */
+.modalHome-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 10px;
+}
+
+/* ✅ Esconde o conteúdo principal quando a modal está aberta */
+.hidden-content {
+  display: none;
+}
+
+.modalHome-content {
+  width: clamp(250px, 40vw, 309px); /* Ajustável conforme a tela */
+  height: clamp(180px, 30vh, 213px);
+  background: #3b447b;
+  color: white;
+  border-radius: 15px;
+  padding: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza horizontalmente */
+  justify-content: center; /* Centraliza verticalmente */
+  text-align: center;
+  border: 1px solid #3b447b;
+}
+
+/* Botão de fechar */
+.close-button {
+  position: absolute;
+  top: 7px;
+  right: 0;
+  background: none;
+  border: none;
+  color: white;
+  font-size: clamp(14px, 2vw, 16px);
+  cursor: pointer;
+}
+
+/* Lista de opções */
+.modalHome-options {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Garante alinhamento perfeito */
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+}
+
+/* Ajuste do alinhamento dos itens */
+.modalHome-options li {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centraliza ícone e texto */
+  gap: 8px;
+  cursor: pointer;
+  font-size: clamp(20px, 2vw, 16px);
+  width: 100%;
+  text-align: center;
+  padding: 5px 0;
+}
+
+/* Ícones dentro da modal */
+.modalHome-options li svg {
+  font-size: clamp(16px, 2vw, 18px);
+}
+
+/* Ajuste para alinhar o botão "Sair" corretamente */
+.modalHome-options li:last-child {
+  margin-top: 0;
+}
+
+/* Efeito ao passar o mouse */
+.modalHome-options li:hover {
+  opacity: 0.8;
+}
+
+/* ===================== */
+/*      CABEÇALHO (HEADER) */
+/* ===================== */
+.home-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  /* background-color: #f3f4f6; */
+  /* padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000; */
+}
+
+/* Ícone de configurações (canto superior direito) */
+.modalHome-button {
+  background: none;
+  border: solid 1px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  background-color: #3b447b;
+  transition: transform 0.2s ease-in-out;
+  width: 45px;
+  height: 45px;
+}
+
+/* Efeito hover */
+.modalHome-button:hover {
+  transform: scale(1.1);
+}
+
+.home-header.sidebar-open {
+  margin-left: min(260px, 25vw);
+}
+
+/* ===================== */
+/*      MENSAGEM DE BOAS-VINDAS */
+/* ===================== */
+.home-greeting-container {
+  max-width: 100%;
+  padding-bottom: 10px;
+  padding-right: 200px;
+  position: relative;
+  margin-left: 0;
+  text-align: center;
+}
+
+.home-greeting {
+  font-size: clamp(22px, 5vw, 32px);
+  font-weight: 700;
+  font-family: "Roboto Slab", sans-serif;
+  color: #3b447b;
+  margin-bottom: 5px;
+  text-align: justify;
+}
+
+.home-subtitle {
+  font-size: clamp(14px, 2vw, 16px);
+  font-weight: 700;
+  font-family: "Roboto Slab", sans-serif;
+  color: #07aba0;
+  text-align: center;
+}
+
+/* ===================== */
+/*      LINHA ABAIXO DO SUBTÍTULO */
+/* ===================== */
+.subtitle-line {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #07aba0, #cccccc, #999999);
+  margin-top: 10px;
+}
+
+/* ===================== */
+/*      SEÇÃO DE AJUDA   */
+/* ===================== */
+.help-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 40px 20px;
+  transition: margin-left 0.3s ease;
+}
+
+.sidebar-open .help-container {
+  margin-left: min(450px, 25vw);
+}
+
+/* ===================== */
+/*       HELP TITLE      */
+/* ===================== */
+.help-title {
+  font-family: "Roboto Slab", sans-serif;
+  font-weight: 700;
+  font-size: clamp(20px, 3vw, 26px);
+  color: #3b447b;
+  margin-bottom: 4px;
+  text-align: justify;
+}
+
+/* ===================== */
+/*     HELP OPTIONS      */
+/* ===================== */
+.help-options {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* ===================== */
+/*       HELP CARD       */
+/* ===================== */
+.help-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 450px;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  padding: 22px;
+  text-align: center;
+  margin: 10px;
+}
+
+.help-card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.help-text {
+  text-align: center;
+}
+
+/* ===================== */
+/*      BOTÃO DE LOGOUT  */
+/* ===================== */
+.logout-button {
+  margin-top: 20px;
+  padding: clamp(8px, 2vw, 12px) clamp(16px, 5vw, 24px);
+  font-size: clamp(12px, 3vw, 16px);
+  font-weight: bold;
+  color: #fff;
+  background-color: #3b447b;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.logout-button:hover {
+  background-color: #2e365f;
+  transform: scale(1.05);
+}
+
+/* ===================== */
+/*  RESPONSIVIDADE EXTRA  */
+/* ===================== */
+@media (max-width: 1024px) {
+  .home-container.sidebar-open {
+    margin-left: min(200px, 20vw); /* Reduz o espaço da sidebar */
+  }
+
+  .home-greeting-container {
+    padding-right: 100px; /* Reduz o padding para telas menores */
+  }
+
+  .help-options {
+    gap: 15px; /* Reduz o espaçamento entre os cards */
+  }
+
+  .help-card {
+    padding: 15px; /* Reduz o padding interno dos cards */
+  }
+
+  .modalHome-content {
+    width: clamp(200px, 50vw, 309px); /* Ajusta a largura da modal */
+    height: auto; /* Altura automática para telas menores */
+  }
+
+  .modalHome-options li {
+    font-size: clamp(16px, 2vw, 18px); /* Ajusta o tamanho da fonte */
+  }
+}
+
+@media (max-width: 768px) {
+  .home-container.sidebar-open {
+    margin-left: 0; /* Remove o margin-left em telas menores */
+  }
+
+  .home-greeting-container {
+    padding-right: 20px; /* Reduz ainda mais o padding */
+  }
+
+  .home-greeting {
+    font-size: clamp(20px, 5vw, 28px); /* Ajusta o tamanho da fonte */
+    text-align: center; /* Centraliza o texto */
+  }
+
+  .home-subtitle {
+    font-size: clamp(12px, 2vw, 14px); /* Ajusta o tamanho da fonte */
+  }
+
+  .help-options {
+    flex-direction: column; /* Coloca os cards em coluna */
+    gap: 10px; /* Reduz o espaçamento entre os cards */
+  }
+
+  .help-card {
+    width: 100%; /* Faz os cards ocuparem 100% da largura */
+    margin: 10px 0; /* Ajusta a margem */
+  }
+
+  .modalHome-content {
+    width: 80%; /* Aumenta a largura da modal */
+    padding: 15px; /* Reduz o padding interno */
+  }
+
+  .modalHome-options li {
+    font-size: clamp(14px, 2vw, 16px); /* Ajusta o tamanho da fonte */
+  }
+
+  .modalHome-options li svg {
+    font-size: clamp(14px, 2vw, 16px); /* Ajusta o tamanho dos ícones */
+  }
+
+  .close-button {
+    top: 5px;
+    right: 5px;
+    font-size: 14px; /* Reduz o tamanho do botão de fechar */
+  }
+
+  .logout-button {
+    width: 100%; /* Faz o botão ocupar 100% da largura */
+    margin-top: 10px; /* Ajusta a margem */
+  }
+}
+
+@media (max-width: 480px) {
+  .home-greeting {
+    font-size: clamp(18px, 5vw, 24px); /* Ajusta o tamanho da fonte */
+  }
+
+  .home-subtitle {
+    font-size: clamp(10px, 2vw, 12px); /* Ajusta o tamanho da fonte */
+  }
+
+  .help-title {
+    font-size: clamp(18px, 3vw, 22px); /* Ajusta o tamanho da fonte */
+    text-align: center; /* Centraliza o texto */
+  }
+
+  .help-card {
+    padding: 10px; /* Reduz o padding interno */
+  }
+
+  .modalHome-content {
+    width: 90%; /* Aumenta a largura da modal */
+    padding: 10px; /* Reduz o padding interno */
+  }
+
+  .modalHome-options li {
+    font-size: clamp(12px, 2vw, 14px); /* Ajusta o tamanho da fonte */
+  }
+
+  .modalHome-options li svg {
+    font-size: clamp(12px, 2vw, 14px); /* Ajusta o tamanho dos ícones */
+  }
+
+  .close-button {
+    top: 4px;
+    right: 4px;
+    font-size: 12px; /* Reduz o tamanho do botão de fechar */
+  }
+
+  .logout-button {
+    font-size: clamp(10px, 3vw, 14px); /* Ajusta o tamanho da fonte */
+    padding: 8px 16px; /* Ajusta o padding */
+  }
+}
+
+/* ===================== */
+/*  AJUSTES ESPECÍFICOS PARA TELAS MUITO PEQUENAS */
+/* ===================== */
+@media (max-width: 320px) {
+  .home-greeting {
+    font-size: clamp(16px, 5vw, 20px); /* Ajusta o tamanho da fonte */
+  }
+
+  .home-subtitle {
+    font-size: clamp(8px, 2vw, 10px); /* Ajusta o tamanho da fonte */
+  }
+
+  .help-title {
+    font-size: clamp(16px, 3vw, 20px); /* Ajusta o tamanho da fonte */
+  }
+
+  .modalHome-content {
+    width: 95%; /* Aumenta a largura da modal */
+    padding: 8px; /* Reduz o padding interno */
+  }
+
+  .modalHome-options li {
+    font-size: clamp(10px, 2vw, 12px); /* Ajusta o tamanho da fonte */
+  }
+
+  .modalHome-options li svg {
+    font-size: clamp(10px, 2vw, 12px); /* Ajusta o tamanho dos ícones */
+  }
+
+  .close-button {
+    top: 3px;
+    right: 3px;
+    font-size: 10px; /* Reduz o tamanho do botão de fechar */
+  }
+
+  .logout-button {
+    font-size: clamp(8px, 3vw, 12px); /* Ajusta o tamanho da fonte */
+    padding: 6px 12px; /* Ajusta o padding */
+  }
+}
